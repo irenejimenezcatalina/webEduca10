@@ -10,3 +10,6 @@
 # Logs y temporales
 *.log
 node_modules/
+
+# Vídeos originales sin optimizar
+docs/*.mp4

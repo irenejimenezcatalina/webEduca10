@@ -696,6 +696,45 @@ h3 {
   border-radius: 5px;
 }
 
+.video-frame {
+  position: relative;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  object-fit: cover;
+}
+
+.video-feature {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-feature video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  background: var(--ink);
+  object-fit: cover;
+}
+
 .check-list {
   display: grid;
   gap: 18px;
@@ -1815,6 +1854,15 @@ h3 {
   .contact-layout,
   .summer-feature {
     grid-template-columns: 1fr;
+  }
+
+  .video-frame {
+    max-width: 300px;
+  }
+
+  .video-feature {
+    padding: 8px;
+    border-radius: var(--radius-md);
   }
 
   .info-card {
