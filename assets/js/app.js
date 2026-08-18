@@ -322,8 +322,9 @@
     musibaby: ["Musibaby", "Estimulación musical de 0 a 4 años en tres idiomas.", "musibaby.html"]
   };
 
-  function brand() {
-    return '<a class="brand" href="index.html" aria-label="Educa10, ir al inicio"><span class="brand__mark" aria-hidden="true">10</span><span class="brand__name"><span>Educa</span>10</span></a>';
+  function brand(variant) {
+    const logo = variant === "footer" ? "assets/images/logo-educa10-blanco.webp" : "assets/images/logo-educa10.webp";
+    return `<a class="brand" href="index.html" aria-label="Educa10, ir al inicio"><img class="brand__logo" src="${logo}" alt="Educa10" width="600" height="152"></a>`;
   }
 
   function renderSocialLinks(modifier = "") {
@@ -375,12 +376,12 @@
       <footer class="site-footer">
         <div class="container">
           <div class="footer-grid">
-            <div class="footer-brand">${brand()}<p>Aprender para disfrutar y disfrutar aprendiendo, en Cala de Bou.</p><p class="footer-social-title">Síguenos y escríbenos</p>${renderSocialLinks("social-links--footer")}</div>
+            <div class="footer-brand">${brand("footer")}<p>Aprender para disfrutar y disfrutar aprendiendo, en Cala de Bou.</p><p class="footer-social-title">Síguenos y escríbenos</p>${renderSocialLinks("social-links--footer")}</div>
             <div class="footer-col"><h3>Aprender</h3><a href="ingles.html">Inglés</a><a href="refuerzo-escolar.html">Refuerzo escolar</a><a href="tecnicas-estudio.html">Técnicas de estudio</a></div>
             <div class="footer-col"><h3>Descubrir</h3><a href="talleres.html">Talleres</a><a href="musibaby.html">Musibaby</a><a href="escuela-verano.html">Escuela de verano</a></div>
             <div class="footer-col"><h3>Estamos aquí</h3><address>${address}</address><a href="tel:+34608687486">${mobilePhone}</a><a href="tel:+34971345511">${landlinePhone}</a><a href="mailto:${email}">${email}</a></div>
           </div>
-          <div class="footer-bottom"><span>© <span id="current-year"></span> Educa10 · Serral ESPJ · Fotografías de <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span><div class="footer-bottom__links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></div></div>
+          <div class="footer-bottom"><span>© <span id="current-year"></span> Educa10 · Serral ESPJ</span><div class="footer-bottom__links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></div></div>
         </div>
       </footer>
       <aside class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-title" hidden>

@@ -13,3 +13,6 @@ node_modules/
 
 # Vídeos originales sin optimizar
 docs/*.mp4
+
+# Estado local de wrangler
+.wrangler/
