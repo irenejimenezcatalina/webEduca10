@@ -467,12 +467,13 @@
   }
 
   function renderContact() {
-    const page = { title: "Hablemos", eyebrow: "Contacto", lead: "Cuéntanos qué necesitas. Te orientaremos sobre programas, grupos y disponibilidad.", tags: ["Sant Agustí", "Atención cercana", "Sin compromiso"] };
-    return `${pageHero(page)}
-      <section class="section"><div class="container contact-layout"><div class="reveal"><p class="eyebrow">Estamos cerca</p><h2>Tu consulta, sin rodeos</h2><p class="lead">Puedes llamarnos, escribirnos por WhatsApp o enviar el formulario directamente. Recibirás una confirmación en esta misma página.</p><div class="contact-details"><div class="contact-detail"><span>Teléfonos</span><a href="tel:+34608687486">${mobilePhone}</a> · <a href="tel:+34971345511">${landlinePhone}</a><br><a class="text-link" href="https://wa.me/34608687486" target="_blank" rel="noopener">Escribir por WhatsApp ${icons.arrow}</a></div><div class="contact-detail"><span>Correo electrónico</span><a href="mailto:${email}">${email}</a></div><div class="contact-detail"><span>Dirección</span><p>${address}</p></div><div class="contact-detail"><span>Redes y contacto</span>${renderSocialLinks("social-links--contact")}</div></div></div>
-        <form class="contact-form reveal" id="contact-form"><h3>¿En qué podemos ayudarte?</h3><div class="form-honeypot" aria-hidden="true"><label for="company-website">No rellenar este campo</label><input id="company-website" name="_honey" tabindex="-1" autocomplete="off"></div><div class="form-grid"><div class="form-field"><label for="name">Nombre *</label><input id="name" name="name" autocomplete="name" required></div><div class="form-field"><label for="contact-email">Correo electrónico *</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div><div class="form-field form-field--full"><label for="interest">Me interesa</label><select id="interest" name="interest"><option value="">Selecciona una opción</option><option>Inglés para niños</option><option>Método GLP</option><option>Cambridge</option><option>Inglés para adultos</option><option>Refuerzo en Primaria</option><option>Refuerzo en ESO</option><option>Técnicas de estudio</option><option>Musibaby</option><option>Escuela de verano</option><option>Otra consulta</option></select></div><div class="form-field form-field--full"><label for="message">Mensaje *</label><textarea id="message" name="message" required placeholder="Cuéntanos brevemente la edad, el curso o el objetivo"></textarea></div></div><label class="checkbox-field"><input type="checkbox" name="privacy" required><span>He leído y acepto la <a href="/privacidad" target="_blank">política de privacidad</a>. *</span></label><div class="form-actions"><button class="button button--aqua" type="submit">Enviar consulta ${icons.arrow}</button><button class="button button--whatsapp" id="whatsapp-form-button" type="button">Abrir WhatsApp ${icons.arrow}</button></div><p class="form-note" id="form-note" role="status" aria-live="polite"></p></form>
-      </div></section>
-      <section class="section section--paper-deep" id="ubicacion"><div class="container"><div class="map-card reveal"><iframe class="map-card__frame" src="https://www.google.com/maps?q=${encodeURIComponent(address)}&amp;output=embed" title="Mapa con la ubicación de Educa10" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-card__pin"><span aria-hidden="true"><b>10</b></span><h3>Educa10</h3><p>${address}</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}" target="_blank" rel="noopener">Cómo llegar ${icons.arrow}</a></div></div></div></section>`;
+    return `<section class="section section--aqua"><div class="container"><div class="page-hero__content">
+      ${breadcrumbs({ title: "Contacto" })}
+      <p class="eyebrow">Estamos cerca</p>
+      <h1>Contacto</h1>
+      <p class="lead">Para más información no dudes en escribirnos por WhatsApp.</p>
+      <div class="button-row"><a class="button button--whatsapp" href="https://wa.me/34608687486" target="_blank" rel="noopener">Escribir por WhatsApp ${icons.arrow}</a></div>
+    </div></div></section>`;
   }
 
   function legalHero(title, eyebrow, lead) {
@@ -489,7 +490,7 @@
     }
 
     if (type === "privacidad") {
-      return `${legalHero("Política de privacidad", "Protección de datos", "Cómo recogemos y tratamos los datos que nos facilitas al contactar con Educa10.")}<section class="section"><div class="container legal-layout">${legalNav(type)}<article class="legal-copy"><h2>Responsable del tratamiento</h2><p><strong>Serral ESPJ</strong>, con CIF E16632580 y domicilio en ${fiscalAddress}. Contacto: <a href="mailto:${email}">${email}</a>.</p><h2>Datos que tratamos</h2><p>Cuando escribes a Educa10 o completas el formulario de contacto podemos tratar los datos que proporcionas, como nombre, correo electrónico, programa de interés y contenido del mensaje.</p><h2>Finalidades</h2><p>Los datos se recogen para atender solicitudes de información y mantener las relaciones derivadas de la prestación de servicios educativos, refuerzo escolar, talleres y actividades complementarias. Cuando exista consentimiento o una base legal adecuada, también podrán utilizarse para comunicar avisos, ofertas e información educativa de interés.</p><h2>Base jurídica</h2><ul><li>El consentimiento del interesado para uno o varios fines específicos.</li><li>La aplicación de medidas precontractuales o la ejecución de un contrato.</li><li>El cumplimiento de obligaciones legales aplicables al responsable.</li></ul><h2>Conservación y destinatarios</h2><p>Los datos se conservarán durante el tiempo necesario para atender la solicitud y cumplir las obligaciones legales correspondientes. Para procesar los envíos del formulario utilizamos FormSubmit, un servicio externo que remite la consulta por correo electrónico. Según la información publicada por el proveedor, las solicitudes pueden conservarse durante un máximo de 30 días. Puedes consultar su <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener">política de privacidad</a>.</p><h2>Derechos</h2><p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento, portabilidad y a no ser objeto de decisiones individualizadas automatizadas.</p><p>Para ejercerlos, escribe a Serral ESPJ en ${fiscalAddress} o a <a href="mailto:${email}?subject=PROTECCION%20DE%20DATOS">${email}</a>, indicando en el asunto «PROTECCIÓN DE DATOS».</p><h2>Exactitud y seguridad</h2><p>El titular responde de la veracidad y vigencia de los datos proporcionados y debe comunicar cualquier modificación. Serral ESPJ se compromete a tratarlos de forma confidencial y a aplicar las medidas de seguridad legalmente exigibles.</p></article></div></section>`;
+      return `${legalHero("Política de privacidad", "Protección de datos", "Cómo recogemos y tratamos los datos que nos facilitas al contactar con Educa10.")}<section class="section"><div class="container legal-layout">${legalNav(type)}<article class="legal-copy"><h2>Responsable del tratamiento</h2><p><strong>Serral ESPJ</strong>, con CIF E16632580 y domicilio en ${fiscalAddress}. Contacto: <a href="mailto:${email}">${email}</a>.</p><h2>Datos que tratamos</h2><p>Cuando escribes a Educa10 podemos tratar los datos que proporcionas, como nombre, correo electrónico, programa de interés y contenido del mensaje.</p><h2>Finalidades</h2><p>Los datos se recogen para atender solicitudes de información y mantener las relaciones derivadas de la prestación de servicios educativos, refuerzo escolar, talleres y actividades complementarias. Cuando exista consentimiento o una base legal adecuada, también podrán utilizarse para comunicar avisos, ofertas e información educativa de interés.</p><h2>Base jurídica</h2><ul><li>El consentimiento del interesado para uno o varios fines específicos.</li><li>La aplicación de medidas precontractuales o la ejecución de un contrato.</li><li>El cumplimiento de obligaciones legales aplicables al responsable.</li></ul><h2>Conservación y destinatarios</h2><p>Los datos se conservarán durante el tiempo necesario para atender la solicitud y cumplir las obligaciones legales correspondientes.</p><h2>Derechos</h2><p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento, portabilidad y a no ser objeto de decisiones individualizadas automatizadas.</p><p>Para ejercerlos, escribe a Serral ESPJ en ${fiscalAddress} o a <a href="mailto:${email}?subject=PROTECCION%20DE%20DATOS">${email}</a>, indicando en el asunto «PROTECCIÓN DE DATOS».</p><h2>Exactitud y seguridad</h2><p>El titular responde de la veracidad y vigencia de los datos proporcionados y debe comunicar cualquier modificación. Serral ESPJ se compromete a tratarlos de forma confidencial y a aplicar las medidas de seguridad legalmente exigibles.</p></article></div></section>`;
     }
 
     return `${legalHero("Política de cookies", "Privacidad y navegación", "Información clara sobre el almacenamiento utilizado por esta versión del sitio web.")}<section class="section"><div class="container legal-layout">${legalNav(type)}<article class="legal-copy"><h2>Qué son las cookies</h2><p>Las cookies son pequeños archivos que un sitio web puede guardar en el dispositivo para recordar información sobre la navegación. Pueden ser necesarias para prestar un servicio o utilizarse, con consentimiento, para personalización, análisis o publicidad.</p><h2>Uso en esta web</h2><p>Educa10 no utiliza herramientas propias de analítica ni publicidad. La web guarda en el almacenamiento local del navegador la elección realizada en el aviso de privacidad. Además, la página de contacto incorpora un mapa interactivo proporcionado por Google Maps. Al cargarlo, el navegador conecta con Google, que puede tratar información técnica y utilizar sus propias cookies conforme a su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.</p><div class="cookie-table-wrap"><table class="cookie-table"><thead><tr><th>Clave o servicio</th><th>Tipo</th><th>Duración</th><th>Finalidad</th></tr></thead><tbody><tr><td>educa10_cookie_preference</td><td>Almacenamiento local</td><td>Hasta que el usuario lo elimine</td><td>Recordar la elección realizada en el aviso.</td></tr><tr><td>Google Maps</td><td>Contenido externo</td><td>Según Google</td><td>Mostrar el mapa interactivo y permitir consultar la ubicación.</td></tr></tbody></table></div><h2>Cómo eliminar la preferencia</h2><p>Puedes borrar los datos del sitio desde la configuración de privacidad de tu navegador. Al hacerlo, el aviso volverá a aparecer en la siguiente visita.</p><h2>Cambios y contacto</h2><p>Esta política puede actualizarse si cambian las tecnologías utilizadas en la web. Si tienes preguntas, escribe a <a href="mailto:${email}?subject=Pol%C3%ADtica%20de%20Cookies">${email}</a> indicando en el asunto «Política de Cookies».</p></article></div></section>`;
@@ -581,81 +582,6 @@
     });
   }
 
-  function setupContactForm() {
-    const form = document.getElementById("contact-form");
-    if (!form) return;
-
-    const params = new URLSearchParams(window.location.search);
-    const requestedInterest = params.get("interes");
-    const interest = form.elements.interest;
-    const whatsappButton = document.getElementById("whatsapp-form-button");
-    if (requestedInterest) {
-      const option = Array.from(interest.options).find((item) => item.text.toLowerCase() === requestedInterest.toLowerCase());
-      if (option) interest.value = option.value;
-    }
-
-    whatsappButton.addEventListener("click", () => {
-      if (!form.reportValidity()) return;
-
-      const data = new FormData(form);
-      const message = [
-        "Hola, Educa10. Quiero solicitar información.",
-        "",
-        `Nombre: ${data.get("name")}`,
-        `Correo: ${data.get("email")}`,
-        `Me interesa: ${data.get("interest") || "Consulta general"}`,
-        `Mensaje: ${data.get("message")}`
-      ].join("\n");
-      const whatsappUrl = `https://wa.me/34608687486?text=${encodeURIComponent(message)}`;
-      window.location.href = whatsappUrl;
-    });
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-
-      const data = new FormData(form);
-      const subject = `Consulta Educa10${data.get("interest") ? ` · ${data.get("interest")}` : ""}`;
-      const note = document.getElementById("form-note");
-      const button = form.querySelector('button[type="submit"]');
-      const buttonLabel = button.innerHTML;
-      const payload = new FormData();
-
-      payload.append("Nombre", data.get("name"));
-      payload.append("email", data.get("email"));
-      payload.append("Interés", data.get("interest") || "Consulta general");
-      payload.append("Mensaje", data.get("message"));
-      payload.append("_subject", subject);
-      payload.append("_template", "table");
-      payload.append("_honey", data.get("_honey") || "");
-
-      button.disabled = true;
-      button.textContent = "Enviando…";
-      note.className = "form-note";
-      note.textContent = "Estamos enviando tu consulta…";
-
-      try {
-        const response = await fetch(`https://formsubmit.co/ajax/${email}`, {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: payload
-        });
-        const result = await response.json().catch(() => null);
-        if (!response.ok || result?.success === false) throw new Error(result?.message || "No se pudo enviar el formulario");
-
-        form.reset();
-        note.className = "form-note is-success";
-        note.textContent = "¡Gracias! Tu consulta se ha enviado correctamente. Te responderemos lo antes posible.";
-      } catch (error) {
-        note.className = "form-note is-error";
-        note.innerHTML = `No hemos podido enviar la consulta. Puedes <a href="https://wa.me/34608687486" target="_blank" rel="noopener">escribirnos por WhatsApp</a> o llamar al ${mobilePhone}.`;
-      } finally {
-        button.disabled = false;
-        button.innerHTML = buttonLabel;
-      }
-    });
-  }
-
   function setupCookieBanner() {
     const banner = document.getElementById("cookie-banner");
     let choice = null;
@@ -705,7 +631,6 @@
   renderFooter();
   document.getElementById("current-year").textContent = new Date().getFullYear();
   setupNavigation();
-  setupContactForm();
   setupCookieBanner();
   setupReveals();
 })();
