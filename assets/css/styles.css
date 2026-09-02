@@ -913,6 +913,13 @@ h3 {
   box-shadow: var(--shadow-sm);
 }
 
+.content-media--poster img {
+  display: block;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
 .content-media figcaption {
   margin-top: 9px;
   color: var(--ink-soft);

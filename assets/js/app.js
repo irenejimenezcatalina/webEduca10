@@ -307,7 +307,7 @@
     eso: ["assets/images/teens-study.jpg", "Estudiantes leyendo y tomando apuntes alrededor de una mesa", "Alexis Brown", "omeaHbEFlN4"],
     "tecnicas-estudio": ["assets/images/study-notes.jpg", "Apuntes subrayados con rotulador junto a libros y notas", "Yen Vu", "3Hcz2zvPqBI"],
     talleres: ["assets/images/kids-crafts.jpg", "Manos de un niño manchadas de pintura azul en un taller creativo", "Phil Hearing", "cylPETXS7is"],
-    musibaby: ["assets/images/baby-music.jpg", "Bebé jugando con un xilófono de colores", "Jelleke Vanooteghem", "bNUGJD3gO94"],
+    musibaby: ["assets/images/taller-musibaby.jpeg", "Taller Musibaby de estimulación musical para bebés de 0 a 4 años en Educa10 (Cala de Bou). Miércoles a las 12 h. Contacto: Aniko, 670 032 241. Instagram: musi_baby.kids."],
     "escuela-verano": ["assets/images/summer-activities.jpg", "Grupo de niños jugando con un paracaídas de colores al aire libre", "Artem Kniaz", "DqgMHzeio7g"]
   };
 
@@ -416,7 +416,8 @@
       return `<section class="content-section"><h3>${section.title}</h3><p>${section.text}</p>${items ? `<ul>${items}</ul>` : ""}</section>`;
     }).join("");
     const media = pageMedia[pageId];
-    const mediaBlock = media ? `<figure class="content-media"><img src="${media[0]}" alt="${media[1]}" loading="lazy"><figcaption>Foto: <a href="https://unsplash.com/photos/${media[3]}?utm_source=educa10&utm_medium=referral" target="_blank" rel="noopener">${media[2]} / Unsplash</a></figcaption></figure>` : "";
+    const mediaCaption = media && media[3] ? `<figcaption>Foto: <a href="https://unsplash.com/photos/${media[3]}?utm_source=educa10&utm_medium=referral" target="_blank" rel="noopener">${media[2]} / Unsplash</a></figcaption>` : "";
+    const mediaBlock = media ? `<figure class="content-media${pageId === "musibaby" ? " content-media--poster" : ""}"><img src="${media[0]}" alt="${media[1]}" loading="lazy">${mediaCaption}</figure>` : "";
     const related = page.related ? `<section class="section section--paper-deep"><div class="container"><div class="section-heading"><div><p class="eyebrow">Encuentra tu camino</p><h2>Elige el programa que encaja contigo</h2></div><p class="lead">Cada propuesta conserva la misma mirada cercana y adapta la forma de aprender a su etapa y objetivo.</p></div><div class="subpage-grid">${relatedCards(page.related)}</div></div></section>` : "";
 
     return `${pageHero(page)}
