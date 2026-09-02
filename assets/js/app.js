@@ -25,36 +25,36 @@
   ];
 
   const navigation = [
-    { label: "Inicio", href: "index.html", id: "inicio" },
-    { label: "Quiénes somos", href: "quienes-somos.html", id: "quienes-somos" },
+    { label: "Inicio", href: "/", id: "inicio" },
+    { label: "Quiénes somos", href: "/quienes-somos", id: "quienes-somos" },
     {
       label: "Inglés",
-      href: "ingles.html",
+      href: "/ingles",
       id: "ingles",
       children: [
-        { label: "Inglés para niños", href: "ingles-ninos.html", id: "ingles-ninos" },
-        { label: "Método GLP", href: "metodo-glp.html", id: "metodo-glp" },
-        { label: "Cambridge", href: "cambridge.html", id: "cambridge" },
-        { label: "Inglés para adultos", href: "ingles-adultos.html", id: "ingles-adultos" }
+        { label: "Inglés para niños", href: "/ingles-ninos", id: "ingles-ninos" },
+        { label: "Método GLP", href: "/metodo-glp", id: "metodo-glp" },
+        { label: "Cambridge", href: "/cambridge", id: "cambridge" },
+        { label: "Inglés para adultos", href: "/ingles-adultos", id: "ingles-adultos" }
       ]
     },
     {
       label: "Refuerzo escolar",
-      href: "refuerzo-escolar.html",
+      href: "/refuerzo-escolar",
       id: "refuerzo-escolar",
       children: [
-        { label: "Primaria", href: "primaria.html", id: "primaria" },
-        { label: "ESO", href: "eso.html", id: "eso" },
-        { label: "Técnicas de estudio", href: "tecnicas-estudio.html", id: "tecnicas-estudio" }
+        { label: "Primaria", href: "/primaria", id: "primaria" },
+        { label: "ESO", href: "/eso", id: "eso" },
+        { label: "Técnicas de estudio", href: "/tecnicas-estudio", id: "tecnicas-estudio" }
       ]
     },
     {
       label: "Talleres",
-      href: "talleres.html",
+      href: "/talleres",
       id: "talleres",
-      children: [{ label: "Musibaby", href: "musibaby.html", id: "musibaby" }]
+      children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
     },
-    { label: "Escuela de verano", href: "escuela-verano.html", id: "escuela-verano" }
+    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" }
   ];
 
   const pages = {
@@ -81,7 +81,7 @@
       eyebrow: "Clases por edades y niveles",
       lead: "Una forma activa de aprender inglés, desde los primeros años hasta los niveles más avanzados de la etapa escolar.",
       tags: ["Desde 3 años", "Juego", "Comunicación", "Hasta B2"],
-      parent: { label: "Inglés", href: "ingles.html" },
+      parent: { label: "Inglés", href: "/ingles" },
       introTitle: "Aprender jugando y comunicándose",
       intro: [
         "En Educa10 los niños comienzan a relacionarse con el inglés desde los 3 años y pueden continuar su aprendizaje por edades y niveles hasta B2.",
@@ -100,7 +100,7 @@
       eyebrow: "Nuevo método de inglés",
       lead: "Aprendizaje 360, íntegramente en inglés y basado en el juego para niños y niñas de 3 a 7 años.",
       tags: ["3–7 años", "100% en inglés", "Juego", "Material sensorial"],
-      parent: { label: "Inglés", href: "ingles.html" },
+      parent: { label: "Inglés", href: "/ingles" },
       introTitle: "Una metodología para el aula y para casa",
       intro: [
         "Great Little People ofrece una metodología efectiva para enseñar inglés durante una etapa especialmente importante. Está diseñada para mantener a los niños motivados y participativos tanto en clase como en casa.",
@@ -120,7 +120,7 @@
       eyebrow: "Centro formador",
       lead: "Preparación desde Pre A1 Starters hasta B2 First for Schools para demostrar el nivel de inglés con una titulación reconocida internacionalmente.",
       tags: ["Pre A1–B2", "Título internacional", "Cuatro destrezas", "No caduca*"],
-      parent: { label: "Inglés", href: "ingles.html" },
+      parent: { label: "Inglés", href: "/ingles" },
       introTitle: "Mucho más que un certificado",
       intro: [
         "Las titulaciones Cambridge English Qualifications acreditan una base sólida y continua en el aprendizaje del inglés. Cada examen se centra en un nivel del Marco Común Europeo de Referencia para las Lenguas (MCER).",
@@ -145,7 +145,7 @@
       eyebrow: "Grupos reducidos",
       lead: "Clases de inglés por las mañanas para mejorar el idioma en un grupo cercano y participativo.",
       tags: ["Adultos", "Mañanas", "Grupos reducidos", "Comunicación"],
-      parent: { label: "Inglés", href: "ingles.html" },
+      parent: { label: "Inglés", href: "/ingles" },
       introTitle: "Mejora tu inglés en grupo",
       intro: [
         "Educa10 ofrece clases de inglés para adultos en grupos reducidos durante las mañanas. El trabajo en grupo permite practicar, compartir dudas y avanzar acompañado.",
@@ -183,7 +183,7 @@
       eyebrow: "Clases de repaso",
       lead: "Apoyo para resolver dudas, afianzar conceptos y ayudar a que cada alumno gane seguridad en su aprendizaje.",
       tags: ["Primaria", "Comprensión", "Motivación", "Confianza"],
-      parent: { label: "Refuerzo escolar", href: "refuerzo-escolar.html" },
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
       introTitle: "Un refuerzo que empieza por comprender",
       intro: [
         "En las sesiones de refuerzo trabajamos las dudas y dificultades que aparecen durante el curso. Comprender un concepto y ser capaz de explicarlo con sus propias palabras es esencial para fijar el aprendizaje.",
@@ -202,7 +202,7 @@
       eyebrow: "Clases de repaso",
       lead: "Apoyo académico para comprender las asignaturas, preparar los exámenes y afrontar la etapa con mayor seguridad.",
       tags: ["ESO", "Asignaturas", "Exámenes", "Autonomía"],
-      parent: { label: "Refuerzo escolar", href: "refuerzo-escolar.html" },
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
       introTitle: "Entender y razonar antes de memorizar",
       intro: [
         "El objetivo del refuerzo no es únicamente aprobar. Trabajamos para que el alumno comprenda las explicaciones, aprenda a buscar soluciones y utilice herramientas que le permitan rendir con más eficacia.",
@@ -221,7 +221,7 @@
       eyebrow: "Aprender a aprender",
       lead: "Herramientas para adoptar una actitud activa ante el estudio, facilitar el aprendizaje y mejorar los resultados.",
       tags: ["Planificación", "Comprensión", "Memoria", "Repaso"],
-      parent: { label: "Refuerzo escolar", href: "refuerzo-escolar.html" },
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
       introTitle: "Desarrollar una forma propia de estudiar",
       intro: [
         "Las técnicas de estudio buscan una actitud activa y el desarrollo de herramientas que faciliten el trabajo y ayuden a mejorar los logros académicos.",
@@ -261,7 +261,7 @@
       eyebrow: "Música en familia",
       lead: "Un programa artístico, educativo y familiar de estimulación musical para niños y niñas de 0 a 4 años.",
       tags: ["0–4 años", "45 minutos", "Tres idiomas", "En familia"],
-      parent: { label: "Talleres", href: "talleres.html" },
+      parent: { label: "Talleres", href: "/talleres" },
       introTitle: "Música, arte y expresión corporal en familia",
       intro: [
         "Musibaby no es solo un programa artístico y educativo. Es, sobre todo, un programa familiar que ofrece a madres y padres herramientas para acercar a sus hijos los estímulos de la música, el arte y la expresión corporal.",
@@ -312,19 +312,19 @@
   };
 
   const relatedLabels = {
-    "ingles-ninos": ["Inglés para niños", "Grupos desde los 3 años y por diferentes edades y niveles.", "ingles-ninos.html"],
-    "metodo-glp": ["Great Little People", "Inglés de 3 a 7 años con juego, movimiento y materiales sensoriales.", "metodo-glp.html"],
-    cambridge: ["Cambridge", "Preparación desde Pre A1 Starters hasta B2 First for Schools.", "cambridge.html"],
-    "ingles-adultos": ["Inglés para adultos", "Grupos reducidos de inglés por las mañanas.", "ingles-adultos.html"],
-    primaria: ["Primaria", "Comprensión, motivación y refuerzo positivo.", "primaria.html"],
-    eso: ["ESO", "Resolución de dudas y preparación de exámenes.", "eso.html"],
-    "tecnicas-estudio": ["Técnicas de estudio", "Herramientas para facilitar el estudio y mejorar los logros.", "tecnicas-estudio.html"],
-    musibaby: ["Musibaby", "Estimulación musical de 0 a 4 años en tres idiomas.", "musibaby.html"]
+    "ingles-ninos": ["Inglés para niños", "Grupos desde los 3 años y por diferentes edades y niveles.", "/ingles-ninos"],
+    "metodo-glp": ["Great Little People", "Inglés de 3 a 7 años con juego, movimiento y materiales sensoriales.", "/metodo-glp"],
+    cambridge: ["Cambridge", "Preparación desde Pre A1 Starters hasta B2 First for Schools.", "/cambridge"],
+    "ingles-adultos": ["Inglés para adultos", "Grupos reducidos de inglés por las mañanas.", "/ingles-adultos"],
+    primaria: ["Primaria", "Comprensión, motivación y refuerzo positivo.", "/primaria"],
+    eso: ["ESO", "Resolución de dudas y preparación de exámenes.", "/eso"],
+    "tecnicas-estudio": ["Técnicas de estudio", "Herramientas para facilitar el estudio y mejorar los logros.", "/tecnicas-estudio"],
+    musibaby: ["Musibaby", "Estimulación musical de 0 a 4 años en tres idiomas.", "/musibaby"]
   };
 
   function brand(variant) {
     const logo = variant === "footer" ? "assets/images/logo-educa10-blanco.webp" : "assets/images/logo-educa10.webp";
-    return `<a class="brand" href="index.html" aria-label="Educa10, ir al inicio"><img class="brand__logo" src="${logo}" alt="Educa10" width="600" height="152"></a>`;
+    return `<a class="brand" href="/" aria-label="Educa10, ir al inicio"><img class="brand__logo" src="${logo}" alt="Educa10" width="600" height="152"></a>`;
   }
 
   function renderSocialLinks(modifier = "") {
@@ -364,10 +364,10 @@
         <div class="container nav-shell">
           ${brand()}
           <nav class="desktop-nav" aria-label="Navegación principal">${desktopNav()}</nav>
-          <a class="button button--aqua nav-cta" href="contacto.html">Contactar ${icons.arrow}</a>
+          <a class="button button--aqua nav-cta" href="/contacto">Contactar ${icons.arrow}</a>
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Abrir menú">${icons.menu}</button>
         </div>
-        <nav class="mobile-nav" id="mobile-navigation" aria-label="Navegación móvil">${mobileNav()}<a class="button button--aqua" href="contacto.html">Contactar ${icons.arrow}</a></nav>
+        <nav class="mobile-nav" id="mobile-navigation" aria-label="Navegación móvil">${mobileNav()}<a class="button button--aqua" href="/contacto">Contactar ${icons.arrow}</a></nav>
       </header>`;
   }
 
@@ -377,23 +377,23 @@
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">${brand("footer")}<p>Aprender para disfrutar y disfrutar aprendiendo, en Cala de Bou.</p><p class="footer-social-title">Síguenos y escríbenos</p>${renderSocialLinks("social-links--footer")}</div>
-            <div class="footer-col"><h3>Aprender</h3><a href="ingles.html">Inglés</a><a href="refuerzo-escolar.html">Refuerzo escolar</a><a href="tecnicas-estudio.html">Técnicas de estudio</a></div>
-            <div class="footer-col"><h3>Descubrir</h3><a href="talleres.html">Talleres</a><a href="musibaby.html">Musibaby</a><a href="escuela-verano.html">Escuela de verano</a></div>
+            <div class="footer-col"><h3>Aprender</h3><a href="/ingles">Inglés</a><a href="/refuerzo-escolar">Refuerzo escolar</a><a href="/tecnicas-estudio">Técnicas de estudio</a></div>
+            <div class="footer-col"><h3>Descubrir</h3><a href="/talleres">Talleres</a><a href="/musibaby">Musibaby</a><a href="/escuela-verano">Escuela de verano</a></div>
             <div class="footer-col"><h3>Estamos aquí</h3><address>${address}</address><a href="tel:+34608687486">${mobilePhone}</a><a href="tel:+34971345511">${landlinePhone}</a><a href="mailto:${email}">${email}</a></div>
           </div>
-          <div class="footer-bottom"><span>© <span id="current-year"></span> Educa10 · Serral ESPJ</span><div class="footer-bottom__links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></div></div>
+          <div class="footer-bottom"><span>© <span id="current-year"></span> Educa10 · Serral ESPJ</span><div class="footer-bottom__links"><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></div></div>
         </div>
       </footer>
       <aside class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-title" hidden>
         <h2 id="cookie-title">Tu privacidad importa</h2>
         <p>No utilizamos analítica ni publicidad propia. Algunos contenidos externos, como el mapa de Google, pueden aplicar su propia política de privacidad.</p>
-        <div class="cookie-banner__actions"><button class="button button--aqua" type="button" data-cookie-choice="accepted">Entendido</button><button class="button button--outline" type="button" data-cookie-choice="rejected">Rechazar</button><a class="button button--outline" href="cookies.html">Saber más</a></div>
+        <div class="cookie-banner__actions"><button class="button button--aqua" type="button" data-cookie-choice="accepted">Entendido</button><button class="button button--outline" type="button" data-cookie-choice="rejected">Rechazar</button><a class="button button--outline" href="/cookies">Saber más</a></div>
       </aside>`;
   }
 
   function breadcrumbs(page) {
     const parent = page.parent ? `${icons.crumb}<a href="${page.parent.href}">${page.parent.label}</a>` : "";
-    return `<nav class="breadcrumbs" aria-label="Migas de pan"><a href="index.html">Inicio</a>${parent}${icons.crumb}<span aria-current="page">${page.title}</span></nav>`;
+    return `<nav class="breadcrumbs" aria-label="Migas de pan"><a href="/">Inicio</a>${parent}${icons.crumb}<span aria-current="page">${page.title}</span></nav>`;
   }
 
   function pageHero(page) {
@@ -423,7 +423,7 @@
     return `${pageHero(page)}
       <section class="section"><div class="container content-grid">
         <article class="prose reveal"><h2>${page.introTitle}</h2>${paragraphs}${mediaBlock}<ul class="check-list">${highlights}</ul>${sections}</article>
-        <aside class="info-card reveal"><span class="info-card__label">Te orientamos</span><h3>${page.sideTitle}</h3><p>${page.sideText}</p><a class="button button--aqua" href="contacto.html?interes=${encodeURIComponent(page.title)}">Pedir información ${icons.arrow}</a></aside>
+        <aside class="info-card reveal"><span class="info-card__label">Te orientamos</span><h3>${page.sideTitle}</h3><p>${page.sideText}</p><a class="button button--aqua" href="/contacto?interes=${encodeURIComponent(page.title)}">Pedir información ${icons.arrow}</a></aside>
       </div></section>
       ${related}
       ${renderCta()}`;
@@ -433,35 +433,35 @@
     const ticker = ["Inglés", "Refuerzo escolar", "Técnicas de estudio", "Musibaby", "Escuela de verano"].map((item) => `<span>${item}</span>`).join("");
     return `
       <section class="hero"><div class="container hero__grid">
-        <div class="hero__copy"><p class="eyebrow">Centro multidisciplinar de aprendizaje</p><h1>Aprender para <span class="word-accent">disfrutar</span></h1><p class="lead">Ayudamos a cada alumno a ganar confianza, conocer sus fortalezas y convertir el aprendizaje en una experiencia educativa, creativa y divertida.</p><div class="button-row"><a class="button button--aqua" href="contacto.html">Cuéntanos qué necesitas ${icons.arrow}</a><a class="button button--outline" href="#programas">Ver programas</a></div><div class="hero__meta"><span>Calidad</span><span>Cercanía</span><span>Profesionalidad</span></div></div>
+        <div class="hero__copy"><p class="eyebrow">Centro multidisciplinar de aprendizaje</p><h1>Aprender para <span class="word-accent">disfrutar</span></h1><p class="lead">Ayudamos a cada alumno a ganar confianza, conocer sus fortalezas y convertir el aprendizaje en una experiencia educativa, creativa y divertida.</p><div class="button-row"><a class="button button--aqua" href="/contacto">Cuéntanos qué necesitas ${icons.arrow}</a><a class="button button--outline" href="#programas">Ver programas</a></div><div class="hero__meta"><span>Calidad</span><span>Cercanía</span><span>Profesionalidad</span></div></div>
         <div class="hero__visual"><div class="hero__blob"></div><img class="hero__photo hero__photo--logo" src="assets/images/eduquito-logo.jpg" alt="Logo de Educa10 con su personaje Eduquito"></div>
       </div></section>
       <div class="ticker" aria-hidden="true"><div class="ticker__track"><div class="ticker__group">${ticker}</div><div class="ticker__group">${ticker}</div></div></div>
       <section class="section" id="programas"><div class="container"><div class="section-heading"><div><p class="eyebrow">Nuestra oferta educativa</p><h2>Diferentes disciplinas en un mismo centro</h2></div><p class="lead">Unificamos clases, talleres y actividades en las mismas instalaciones para ofrecer más comodidad y continuidad a las familias.</p></div>
         <div class="card-grid">
-          <article class="service-card reveal" style="--card-color: var(--aqua-soft)"><span class="service-card__number">01</span><h3>Inglés</h3><p>Metodologías activas para integrar el idioma y utilizarlo de forma cada vez más natural.</p><a class="text-link" href="ingles.html">Explorar inglés ${icons.arrow}</a></article>
-          <article class="service-card reveal" style="--card-color: #fff0c6"><span class="service-card__number">02</span><h3>Refuerzo escolar</h3><p>Actividades y estrategias para resolver dudas y trabajar las dificultades de aprendizaje.</p><a class="text-link" href="refuerzo-escolar.html">Ver refuerzo ${icons.arrow}</a></article>
-          <article class="service-card reveal" style="--card-color: #ffe4dc"><span class="service-card__number">03</span><h3>Talleres</h3><p>Experimentación y creación infantil para explorar técnicas y desarrollar la imaginación.</p><a class="text-link" href="talleres.html">Descubrir talleres ${icons.arrow}</a></article>
-          <article class="service-card reveal" style="--card-color: #e7e4ff"><span class="service-card__number">04</span><h3>Técnicas de estudio</h3><p>Una actitud activa y herramientas que facilitan el estudio y ayudan a mejorar los logros.</p><a class="text-link" href="tecnicas-estudio.html">Aprender a aprender ${icons.arrow}</a></article>
-          <article class="service-card reveal" style="--card-color: #e4f4dc"><span class="service-card__number">05</span><h3>Escuela de verano</h3><p>Aprendizaje, juego y diversión para seguir potenciando sus fortalezas durante las vacaciones.</p><a class="text-link" href="escuela-verano.html">Preparar el verano ${icons.arrow}</a></article>
-          <article class="service-card reveal" style="--card-color: #f0e7da"><span class="service-card__number">06</span><h3>Cambridge</h3><p>Preparación desde Pre A1 Starters hasta B2 First for Schools.</p><a class="text-link" href="cambridge.html">Ver niveles ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: var(--aqua-soft)"><span class="service-card__number">01</span><h3>Inglés</h3><p>Metodologías activas para integrar el idioma y utilizarlo de forma cada vez más natural.</p><a class="text-link" href="/ingles">Explorar inglés ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: #fff0c6"><span class="service-card__number">02</span><h3>Refuerzo escolar</h3><p>Actividades y estrategias para resolver dudas y trabajar las dificultades de aprendizaje.</p><a class="text-link" href="/refuerzo-escolar">Ver refuerzo ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: #ffe4dc"><span class="service-card__number">03</span><h3>Talleres</h3><p>Experimentación y creación infantil para explorar técnicas y desarrollar la imaginación.</p><a class="text-link" href="/talleres">Descubrir talleres ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: #e7e4ff"><span class="service-card__number">04</span><h3>Técnicas de estudio</h3><p>Una actitud activa y herramientas que facilitan el estudio y ayudan a mejorar los logros.</p><a class="text-link" href="/tecnicas-estudio">Aprender a aprender ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: #e4f4dc"><span class="service-card__number">05</span><h3>Escuela de verano</h3><p>Aprendizaje, juego y diversión para seguir potenciando sus fortalezas durante las vacaciones.</p><a class="text-link" href="/escuela-verano">Preparar el verano ${icons.arrow}</a></article>
+          <article class="service-card reveal" style="--card-color: #f0e7da"><span class="service-card__number">06</span><h3>Cambridge</h3><p>Preparación desde Pre A1 Starters hasta B2 First for Schools.</p><a class="text-link" href="/cambridge">Ver niveles ${icons.arrow}</a></article>
         </div></div></section>
       <section class="section section--paper-deep" id="video"><div class="container"><div class="section-heading"><div><p class="eyebrow">En vídeo</p><h2>Conoce Educa10 en poco más de un minuto</h2></div><p class="lead">Las instalaciones, las aulas y las clases del centro, contadas en imágenes.</p></div><div class="video-feature reveal"><video src="assets/video/educa10-academia.mp4" poster="assets/images/video-academia-poster.jpg" controls playsinline preload="none">Tu navegador no puede reproducir este vídeo.</video></div></div></section>
-      <section class="section section--aqua"><div class="container about-split"><div class="photo-frame reveal"><img src="assets/images/fachada-educa10.jpg" alt="Fachada del centro Educa10 en Sant Agustí"></div><div class="reveal"><p class="eyebrow">Quiénes somos</p><h2>Un equipo interdisciplinar</h2><p class="lead">Maestros, profesores de distintas materias y profesionales de la educación trabajan para ofrecer sesiones de calidad adaptadas a los diferentes niveles de aprendizaje.</p><ul class="check-list"><li>Calidad, cercanía y profesionalidad.</li><li>Desarrollo integral, autonomía y confianza.</li><li>Aprendizaje divertido, creativo y educativo.</li></ul><div class="button-row"><a class="button" href="quienes-somos.html">Conócenos ${icons.arrow}</a></div></div></div></section>
-      <section class="section" id="equipo"><div class="container"><div class="section-heading"><div><p class="eyebrow">Conoce al equipo</p><h2>Personas que acompañan de verdad</h2></div><p class="lead">Calidad, cercanía y profesionalidad son los pilares del equipo interdisciplinar de Educa10.</p></div><div class="team-feature-grid"><article class="team-feature reveal"><img src="assets/images/team-rosa.jpg" alt="Rosa Portas, dirección y gerencia de Educa10" loading="lazy"><div><span>Dirección y gerencia</span><h3>Rosa Portas</h3></div></article><article class="team-feature reveal"><img src="assets/images/team-catina.jpg" alt="Catina Torres, jefa de estudios de Educa10" loading="lazy"><div><span>Jefa de estudios</span><h3>Catina Torres</h3></div></article></div><div class="button-row button-row--center"><a class="button button--outline" href="quienes-somos.html">Conocer a todo el equipo ${icons.arrow}</a></div></div></section>
+      <section class="section section--aqua"><div class="container about-split"><div class="photo-frame reveal"><img src="assets/images/fachada-educa10.jpg" alt="Fachada del centro Educa10 en Sant Agustí"></div><div class="reveal"><p class="eyebrow">Quiénes somos</p><h2>Un equipo interdisciplinar</h2><p class="lead">Maestros, profesores de distintas materias y profesionales de la educación trabajan para ofrecer sesiones de calidad adaptadas a los diferentes niveles de aprendizaje.</p><ul class="check-list"><li>Calidad, cercanía y profesionalidad.</li><li>Desarrollo integral, autonomía y confianza.</li><li>Aprendizaje divertido, creativo y educativo.</li></ul><div class="button-row"><a class="button" href="/quienes-somos">Conócenos ${icons.arrow}</a></div></div></div></section>
+      <section class="section" id="equipo"><div class="container"><div class="section-heading"><div><p class="eyebrow">Conoce al equipo</p><h2>Personas que acompañan de verdad</h2></div><p class="lead">Calidad, cercanía y profesionalidad son los pilares del equipo interdisciplinar de Educa10.</p></div><div class="team-feature-grid"><article class="team-feature reveal"><img src="assets/images/team-rosa.jpg" alt="Rosa Portas, dirección y gerencia de Educa10" loading="lazy"><div><span>Dirección y gerencia</span><h3>Rosa Portas</h3></div></article><article class="team-feature reveal"><img src="assets/images/team-catina.jpg" alt="Catina Torres, jefa de estudios de Educa10" loading="lazy"><div><span>Jefa de estudios</span><h3>Catina Torres</h3></div></article></div><div class="button-row button-row--center"><a class="button button--outline" href="/quienes-somos">Conocer a todo el equipo ${icons.arrow}</a></div></div></section>
       <section class="section section--ink"><div class="container"><div class="section-heading"><div><p class="eyebrow">Formatos de clase</p><h2>Atención individual y aprendizaje en grupo</h2></div><p class="lead">Elegimos el formato en función de las necesidades, el ritmo y los objetivos del alumnado.</p></div><div class="steps"><article class="step reveal"><span class="step__number">01 · Personalización</span><h3>Sesiones individuales</h3><p>Clases adaptadas al ritmo del estudiante, con resolución inmediata de dudas y un enfoque directo sobre sus necesidades.</p></article><article class="step reveal"><span class="step__number">02 · Cooperación</span><h3>Grupos reducidos</h3><p>Los alumnos reflexionan, buscan respuestas en común y se ayudan entre ellos en un entorno de participación.</p></article><article class="step reveal"><span class="step__number">03 · Adaptación</span><h3>Un plan para cada caso</h3><p>Las sesiones y los grupos se ajustan a las diferentes necesidades para favorecer la confianza y el progreso.</p></article></div></div></section>
-      <section class="section section--paper-deep" id="verano"><div class="container summer-feature"><div class="summer-feature__image reveal"><img src="assets/images/summer-outdoor.jpg" alt="Grupo de niños jugando en equipo al aire libre en verano" loading="lazy"></div><div class="reveal"><p class="eyebrow">Escuela de verano 2026</p><h2>Este verano, aprender también es jugar</h2><p class="lead">Del 22 de junio al 9 de septiembre, para niños y niñas de 3 a 9 años, con actividades educativas, creativas y al aire libre.</p><div class="summer-facts"><span><strong>7:45–16:00</strong> horario flexible</span><span><strong>Catering</strong> incluido</span><span><strong>4 modalidades</strong> de inscripción</span></div><a class="button button--aqua" href="escuela-verano.html">Ver Escuela de Verano ${icons.arrow}</a></div></div></section>
-      <section class="section"><div class="container"><div class="feature-band reveal"><div><p class="eyebrow">¿Empezamos?</p><h2>A veces, una buena conversación es el primer gran paso.</h2></div><div class="feature-band__aside"><p>Cuéntanos la edad, el curso o el objetivo. Te ayudaremos a encontrar la propuesta más adecuada.</p><a class="button" href="contacto.html">Contactar ${icons.arrow}</a></div></div></div></section>`;
+      <section class="section section--paper-deep" id="verano"><div class="container summer-feature"><div class="summer-feature__image reveal"><img src="assets/images/summer-outdoor.jpg" alt="Grupo de niños jugando en equipo al aire libre en verano" loading="lazy"></div><div class="reveal"><p class="eyebrow">Escuela de verano 2026</p><h2>Este verano, aprender también es jugar</h2><p class="lead">Del 22 de junio al 9 de septiembre, para niños y niñas de 3 a 9 años, con actividades educativas, creativas y al aire libre.</p><div class="summer-facts"><span><strong>7:45–16:00</strong> horario flexible</span><span><strong>Catering</strong> incluido</span><span><strong>4 modalidades</strong> de inscripción</span></div><a class="button button--aqua" href="/escuela-verano">Ver Escuela de Verano ${icons.arrow}</a></div></div></section>
+      <section class="section"><div class="container"><div class="feature-band reveal"><div><p class="eyebrow">¿Empezamos?</p><h2>A veces, una buena conversación es el primer gran paso.</h2></div><div class="feature-band__aside"><p>Cuéntanos la edad, el curso o el objetivo. Te ayudaremos a encontrar la propuesta más adecuada.</p><a class="button" href="/contacto">Contactar ${icons.arrow}</a></div></div></div></section>`;
   }
 
   function renderAbout() {
     const page = { title: "Quiénes somos", eyebrow: "Conoce Educa10", lead: "Un equipo interdisciplinar que ofrece una educación de calidad, adecuada a los diferentes niveles de aprendizaje y adaptada al futuro.", tags: ["Calidad", "Cercanía", "Profesionalidad", "Formación continua"] };
     return `${pageHero(page)}
       <section class="section"><div class="container about-split"><div class="prose reveal"><p class="eyebrow">Nuestro centro</p><h2>Educación de calidad para cada etapa</h2><p>Educa10 es un centro multidisciplinar y polivalente de estudios y aprendizaje. Nuestro equipo reúne a maestros, profesores de diferentes materias y profesionales del ámbito educativo.</p><p>El objetivo principal es el desarrollo integral del alumnado. En todas las actividades buscamos que los estudiantes aprendan de una forma divertida, creativa y educativa, potenciando su autonomía y su desarrollo personal.</p><p>El profesorado es una pieza fundamental del proceso de enseñanza y tiene la capacidad de mejorar el futuro del alumnado. Por eso consideramos clave su formación continua.</p></div><div class="photo-frame reveal"><img src="assets/images/fachada-educa10.jpg" alt="Entrada de Educa10, centro de estudios y aprendizaje"></div></div></section>
-      <section class="section section--aqua"><div class="container about-split"><div class="video-frame reveal"><video src="assets/video/educa10-centro.mp4" poster="assets/images/video-poster.jpg" controls playsinline preload="none">Tu navegador no puede reproducir este vídeo.</video></div><div class="reveal"><p class="eyebrow">En vídeo</p><h2>Un paseo por Educa10</h2><p class="lead">Te enseñamos el centro por dentro: las aulas, los espacios de trabajo y el ambiente en el que aprenden cada día nuestros alumnos.</p><p>Estamos en Sant Agustí y la mejor forma de conocernos es venir a vernos, pero este vídeo es un buen primer paso.</p><div class="button-row"><a class="button" href="contacto.html">Ven a visitarnos ${icons.arrow}</a></div></div></div></section>
+      <section class="section section--aqua"><div class="container about-split"><div class="video-frame reveal"><video src="assets/video/educa10-centro.mp4" poster="assets/images/video-poster.jpg" controls playsinline preload="none">Tu navegador no puede reproducir este vídeo.</video></div><div class="reveal"><p class="eyebrow">En vídeo</p><h2>Un paseo por Educa10</h2><p class="lead">Te enseñamos el centro por dentro: las aulas, los espacios de trabajo y el ambiente en el que aprenden cada día nuestros alumnos.</p><p>Estamos en Sant Agustí y la mejor forma de conocernos es venir a vernos, pero este vídeo es un buen primer paso.</p><div class="button-row"><a class="button" href="/contacto">Ven a visitarnos ${icons.arrow}</a></div></div></div></section>
       <section class="section section--paper-deep"><div class="container"><div class="section-heading"><div><p class="eyebrow">Nuestros pilares</p><h2>Calidad, cercanía y profesionalidad</h2></div><p class="lead">Tres principios que están presentes en las clases, el acompañamiento y todas las actividades del centro.</p></div><div class="values-grid"><article class="value-card reveal"><h3>Calidad</h3><p>Velamos por una enseñanza y unas sesiones adecuadas a los diferentes niveles de aprendizaje.</p></article><article class="value-card reveal"><h3>Cercanía</h3><p>Un acompañamiento atento ayuda a conocer las necesidades, las fortalezas y el ritmo de cada alumno.</p></article><article class="value-card reveal"><h3>Profesionalidad</h3><p>Un equipo interdisciplinar y en formación continua coordina las distintas áreas y actividades.</p></article></div></div></section>
       <section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">Nuestro equipo</p><h2>Personas que enseñan y siguen aprendiendo</h2></div><p class="lead">Un equipo coordinado, interdisciplinar y en formación continua.</p></div><div class="team-grid"><article class="team-card reveal"><img src="assets/images/team-rosa.jpg" alt="Rosa Portas" loading="lazy"><div class="team-card__body"><span>Dirección y gerencia</span><h3>Rosa Portas</h3></div></article><article class="team-card reveal"><img src="assets/images/team-catina.jpg" alt="Catina Torres" loading="lazy"><div class="team-card__body"><span>Jefa de estudios</span><h3>Catina Torres</h3><p>Coordinación de profesorado, monitores y actividades.</p></div></article><article class="team-card reveal"><img src="assets/images/team-isabel.jpg" alt="Isabel, profesora de inglés" loading="lazy"><div class="team-card__body"><span>Profesora de inglés</span><h3>Isabel</h3><p>Licenciada en Filología Inglesa y Máster de Profesorado.</p></div></article><article class="team-card reveal"><img src="assets/images/team-carmen.jpg" alt="Carmen, profesora de inglés" loading="lazy"><div class="team-card__body"><span>Profesora de inglés</span><h3>Carmen</h3></div></article><article class="team-card reveal"><img src="assets/images/team-raquel.jpg" alt="Raquel, profesora de refuerzo" loading="lazy"><div class="team-card__body"><span>Profesora de refuerzo</span><h3>Raquel</h3><p>Graduada en Bellas Artes y Máster de Profesorado.</p></div></article></div></div></section>
-      <section class="section"><div class="container about-split"><div class="editorial-card reveal"><img src="assets/images/prensa-educa10.png" alt="Artículo de prensa sobre Educa10 y sus actividades educativas"></div><div class="reveal"><p class="eyebrow">Nuestra mirada</p><h2>Aprender para disfrutar y disfrutar aprendiendo</h2><p class="lead">Queremos que el alumnado desarrolle confianza, sea feliz y aprenda a conocer y potenciar sus fortalezas.</p><p>En Educa10, aprender se convierte en una aventura de experiencias, conocimientos y diversión desde un punto de vista educativo.</p><a class="button button--aqua" href="contacto.html">Ven a conocernos ${icons.arrow}</a></div></div></section>
+      <section class="section"><div class="container about-split"><div class="editorial-card reveal"><img src="assets/images/prensa-educa10.png" alt="Artículo de prensa sobre Educa10 y sus actividades educativas"></div><div class="reveal"><p class="eyebrow">Nuestra mirada</p><h2>Aprender para disfrutar y disfrutar aprendiendo</h2><p class="lead">Queremos que el alumnado desarrolle confianza, sea feliz y aprenda a conocer y potenciar sus fortalezas.</p><p>En Educa10, aprender se convierte en una aventura de experiencias, conocimientos y diversión desde un punto de vista educativo.</p><a class="button button--aqua" href="/contacto">Ven a conocernos ${icons.arrow}</a></div></div></section>
       <section class="section section--aqua"><div class="container quote-block reveal"><blockquote>“La educación es nuestro pasaporte para el futuro, porque el mañana pertenece a la gente que se prepara para el hoy.”</blockquote><cite>John Dewey</cite></div></section>${renderCta()}`;
   }
 
@@ -469,7 +469,7 @@
     const page = { title: "Hablemos", eyebrow: "Contacto", lead: "Cuéntanos qué necesitas. Te orientaremos sobre programas, grupos y disponibilidad.", tags: ["Sant Agustí", "Atención cercana", "Sin compromiso"] };
     return `${pageHero(page)}
       <section class="section"><div class="container contact-layout"><div class="reveal"><p class="eyebrow">Estamos cerca</p><h2>Tu consulta, sin rodeos</h2><p class="lead">Puedes llamarnos, escribirnos por WhatsApp o enviar el formulario directamente. Recibirás una confirmación en esta misma página.</p><div class="contact-details"><div class="contact-detail"><span>Teléfonos</span><a href="tel:+34608687486">${mobilePhone}</a> · <a href="tel:+34971345511">${landlinePhone}</a><br><a class="text-link" href="https://wa.me/34608687486" target="_blank" rel="noopener">Escribir por WhatsApp ${icons.arrow}</a></div><div class="contact-detail"><span>Correo electrónico</span><a href="mailto:${email}">${email}</a></div><div class="contact-detail"><span>Dirección</span><p>${address}</p></div><div class="contact-detail"><span>Redes y contacto</span>${renderSocialLinks("social-links--contact")}</div></div></div>
-        <form class="contact-form reveal" id="contact-form"><h3>¿En qué podemos ayudarte?</h3><div class="form-honeypot" aria-hidden="true"><label for="company-website">No rellenar este campo</label><input id="company-website" name="_honey" tabindex="-1" autocomplete="off"></div><div class="form-grid"><div class="form-field"><label for="name">Nombre *</label><input id="name" name="name" autocomplete="name" required></div><div class="form-field"><label for="contact-email">Correo electrónico *</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div><div class="form-field form-field--full"><label for="interest">Me interesa</label><select id="interest" name="interest"><option value="">Selecciona una opción</option><option>Inglés para niños</option><option>Método GLP</option><option>Cambridge</option><option>Inglés para adultos</option><option>Refuerzo en Primaria</option><option>Refuerzo en ESO</option><option>Técnicas de estudio</option><option>Musibaby</option><option>Escuela de verano</option><option>Otra consulta</option></select></div><div class="form-field form-field--full"><label for="message">Mensaje *</label><textarea id="message" name="message" required placeholder="Cuéntanos brevemente la edad, el curso o el objetivo"></textarea></div></div><label class="checkbox-field"><input type="checkbox" name="privacy" required><span>He leído y acepto la <a href="privacidad.html" target="_blank">política de privacidad</a>. *</span></label><div class="form-actions"><button class="button button--aqua" type="submit">Enviar consulta ${icons.arrow}</button><button class="button button--whatsapp" id="whatsapp-form-button" type="button">Abrir WhatsApp ${icons.arrow}</button></div><p class="form-note" id="form-note" role="status" aria-live="polite"></p></form>
+        <form class="contact-form reveal" id="contact-form"><h3>¿En qué podemos ayudarte?</h3><div class="form-honeypot" aria-hidden="true"><label for="company-website">No rellenar este campo</label><input id="company-website" name="_honey" tabindex="-1" autocomplete="off"></div><div class="form-grid"><div class="form-field"><label for="name">Nombre *</label><input id="name" name="name" autocomplete="name" required></div><div class="form-field"><label for="contact-email">Correo electrónico *</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div><div class="form-field form-field--full"><label for="interest">Me interesa</label><select id="interest" name="interest"><option value="">Selecciona una opción</option><option>Inglés para niños</option><option>Método GLP</option><option>Cambridge</option><option>Inglés para adultos</option><option>Refuerzo en Primaria</option><option>Refuerzo en ESO</option><option>Técnicas de estudio</option><option>Musibaby</option><option>Escuela de verano</option><option>Otra consulta</option></select></div><div class="form-field form-field--full"><label for="message">Mensaje *</label><textarea id="message" name="message" required placeholder="Cuéntanos brevemente la edad, el curso o el objetivo"></textarea></div></div><label class="checkbox-field"><input type="checkbox" name="privacy" required><span>He leído y acepto la <a href="/privacidad" target="_blank">política de privacidad</a>. *</span></label><div class="form-actions"><button class="button button--aqua" type="submit">Enviar consulta ${icons.arrow}</button><button class="button button--whatsapp" id="whatsapp-form-button" type="button">Abrir WhatsApp ${icons.arrow}</button></div><p class="form-note" id="form-note" role="status" aria-live="polite"></p></form>
       </div></section>
       <section class="section section--paper-deep" id="ubicacion"><div class="container"><div class="map-card reveal"><iframe class="map-card__frame" src="https://www.google.com/maps?q=${encodeURIComponent(address)}&amp;output=embed" title="Mapa con la ubicación de Educa10" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-card__pin"><span aria-hidden="true"><b>10</b></span><h3>Educa10</h3><p>${address}</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}" target="_blank" rel="noopener">Cómo llegar ${icons.arrow}</a></div></div></div></section>`;
   }
@@ -479,7 +479,7 @@
   }
 
   function legalNav(active) {
-    return `<nav class="legal-nav" aria-label="Documentos legales"><a href="aviso-legal.html" class="${active === "aviso-legal" ? "is-active" : ""}">Aviso legal</a><a href="privacidad.html" class="${active === "privacidad" ? "is-active" : ""}">Privacidad</a><a href="cookies.html" class="${active === "cookies" ? "is-active" : ""}">Cookies</a></nav>`;
+    return `<nav class="legal-nav" aria-label="Documentos legales"><a href="/aviso-legal" class="${active === "aviso-legal" ? "is-active" : ""}">Aviso legal</a><a href="/privacidad" class="${active === "privacidad" ? "is-active" : ""}">Privacidad</a><a href="/cookies" class="${active === "cookies" ? "is-active" : ""}">Cookies</a></nav>`;
   }
 
   function renderLegal(type) {
@@ -495,7 +495,7 @@
   }
 
   function renderCta() {
-    return `<section class="section section--ink"><div class="container feature-band" style="background: transparent; padding: 0;"><div><p class="eyebrow">Más información</p><h2>Encuentra la opción adecuada</h2></div><div class="feature-band__aside" style="border-color: rgba(255,255,255,.2)"><p style="color: rgba(255,255,255,.7)">Contacta con Educa10 y te informaremos de los grupos, horarios y plazas disponibles.</p><a class="button button--light" href="contacto.html">Contactar ${icons.arrow}</a></div></div></section>`;
+    return `<section class="section section--ink"><div class="container feature-band" style="background: transparent; padding: 0;"><div><p class="eyebrow">Más información</p><h2>Encuentra la opción adecuada</h2></div><div class="feature-band__aside" style="border-color: rgba(255,255,255,.2)"><p style="color: rgba(255,255,255,.7)">Contacta con Educa10 y te informaremos de los grupos, horarios y plazas disponibles.</p><a class="button button--light" href="/contacto">Contactar ${icons.arrow}</a></div></div></section>`;
   }
 
   function renderPage() {
