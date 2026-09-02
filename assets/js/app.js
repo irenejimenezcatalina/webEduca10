@@ -324,8 +324,8 @@
   };
 
   function brand(variant) {
-    const logo = variant === "footer" ? "assets/images/logo-educa10-blanco.webp" : "assets/images/logo-educa10.webp";
-    return `<a class="brand" href="/" aria-label="Educa10, ir al inicio"><img class="brand__logo" src="${logo}" alt="Educa10" width="600" height="152"></a>`;
+    const logo = "assets/images/logo-centro-multidisciplinar.jpeg";
+    return `<a class="brand" href="/" aria-label="Educa10, ir al inicio"><img class="brand__logo" src="${logo}" alt="Educa10 · Centro de estudios multidisciplinar" width="1600" height="497"></a>`;
   }
 
   function renderSocialLinks(modifier = "") {
@@ -435,7 +435,7 @@
     return `
       <section class="hero"><div class="container hero__grid">
         <div class="hero__copy"><p class="eyebrow">Centro multidisciplinar de aprendizaje</p><h1>Aprender para <span class="word-accent">disfrutar</span></h1><p class="lead">Ayudamos a cada alumno a ganar confianza, conocer sus fortalezas y convertir el aprendizaje en una experiencia educativa, creativa y divertida.</p><div class="button-row"><a class="button button--aqua" href="/contacto">Cuéntanos qué necesitas ${icons.arrow}</a><a class="button button--outline" href="#programas">Ver programas</a></div><div class="hero__meta"><span>Calidad</span><span>Cercanía</span><span>Profesionalidad</span></div></div>
-        <div class="hero__visual"><div class="hero__blob"></div><img class="hero__photo hero__photo--logo" src="assets/images/eduquito-logo.jpg" alt="Logo de Educa10 con su personaje Eduquito"></div>
+        <div class="hero__visual"><div class="hero__blob"></div><img class="hero__photo hero__photo--logo" src="assets/images/logo-centro-multidisciplinar.jpeg" alt="Educa10 · Centro de estudios multidisciplinar"></div>
       </div></section>
       <div class="ticker" aria-hidden="true"><div class="ticker__track"><div class="ticker__group">${ticker}</div><div class="ticker__group">${ticker}</div></div></div>
       <section class="section" id="programas"><div class="container"><div class="section-heading"><div><p class="eyebrow">Nuestra oferta educativa</p><h2>Diferentes disciplinas en un mismo centro</h2></div><p class="lead">Unificamos clases, talleres y actividades en las mismas instalaciones para ofrecer más comodidad y continuidad a las familias.</p></div>
