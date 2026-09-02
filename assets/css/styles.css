@@ -2003,3 +2003,11 @@ h3 {
     flex: 1;
   }
 }
+
+/* Blog: entradas mensuales y archivo. */
+.blog-entries { min-width: 0; }
+.blog-entry + .blog-entry { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--ink-soft); }
+.blog-entry { scroll-margin-top: 120px; }
+.blog-photo img { display: block; aspect-ratio: 3 / 2; height: auto; }
+.blog-archive-title { font-size: 1.3rem; margin: 12px 0 20px; }
+.blog-entries + aside nav { display: grid; gap: 12px; margin-bottom: 20px; }

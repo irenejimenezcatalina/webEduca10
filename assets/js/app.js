@@ -54,7 +54,8 @@
       id: "talleres",
       children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
     },
-    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" }
+    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" },
+    { label: "Blog", href: "/blog", id: "blog" }
   ];
 
   const pages = {
@@ -378,7 +379,7 @@
           <div class="footer-grid">
             <div class="footer-brand">${brand("footer")}<p>Aprender para disfrutar y disfrutar aprendiendo, en Cala de Bou.</p><p class="footer-social-title">Síguenos y escríbenos</p>${renderSocialLinks("social-links--footer")}</div>
             <div class="footer-col"><h3>Aprender</h3><a href="/ingles">Inglés</a><a href="/refuerzo-escolar">Refuerzo escolar</a><a href="/tecnicas-estudio">Técnicas de estudio</a></div>
-            <div class="footer-col"><h3>Descubrir</h3><a href="/talleres">Talleres</a><a href="/musibaby">Musibaby</a><a href="/escuela-verano">Escuela de verano</a></div>
+            <div class="footer-col"><h3>Descubrir</h3><a href="/blog">Blog</a><a href="/talleres">Talleres</a><a href="/musibaby">Musibaby</a><a href="/escuela-verano">Escuela de verano</a></div>
             <div class="footer-col"><h3>Estamos aquí</h3><address>${address}</address><a href="tel:+34608687486">${mobilePhone}</a><a href="tel:+34971345511">${landlinePhone}</a><a href="mailto:${email}">${email}</a></div>
           </div>
           <div class="footer-bottom"><span>© <span id="current-year"></span> Educa10 · Serral ESPJ</span><div class="footer-bottom__links"><a href="/aviso-legal">Aviso legal</a><a href="/privacidad">Privacidad</a><a href="/cookies">Cookies</a></div></div>
@@ -498,10 +499,41 @@
     return `<section class="section section--ink"><div class="container feature-band" style="background: transparent; padding: 0;"><div><p class="eyebrow">Más información</p><h2>Encuentra la opción adecuada</h2></div><div class="feature-band__aside" style="border-color: rgba(255,255,255,.2)"><p style="color: rgba(255,255,255,.7)">Contacta con Educa10 y te informaremos de los grupos, horarios y plazas disponibles.</p><a class="button button--light" href="/contacto">Contactar ${icons.arrow}</a></div></div></section>`;
   }
 
+  // Añadir cada entrada mensual al principio de la lista, conservando las anteriores.
+  const blogPosts = [{
+    id: "septiembre-2026",
+    date: "2026-09",
+    month: "Septiembre 2026",
+    title: "Volver a clase con ganas de descubrir",
+    image: "assets/images/blog-vuelta-a-clase.jpg",
+    alt: "Niño sonriente con mochila, ilusionado por volver a clase",
+    paragraphs: [
+      "Septiembre invita a empezar de nuevo: preparar la mochila, recuperar las rutinas y descubrir todo lo que nos gustaría aprender. En Educa10 queremos acompañar ese comienzo con una idea sencilla: aprender puede ser una experiencia que se disfruta.",
+      "Estrenamos este blog como punto de encuentro con las familias. Aquí reuniremos cada mes las principales novedades de la academia, las propuestas de nuestros talleres y los momentos que queramos compartir de la vida del centro.",
+      "Para esta vuelta a clase, os invitamos a conocer nuestras propuestas de inglés, refuerzo escolar y técnicas de estudio. También podéis descubrir Musibaby, una propuesta de estimulación musical para los más pequeños y sus familias. Si queréis información sobre horarios, grupos o plazas, escribidnos: os orientaremos según la edad y las necesidades de cada alumno.",
+      "Comenzar con pequeños objetivos, reservar un tiempo para descansar y celebrar cada avance ayuda a vivir esta etapa con ilusión. ¡Bienvenidas a este nuevo espacio, familias!"
+    ]
+  }];
+
+  function renderBlog() {
+    const entries = blogPosts.map(post => `<article class="blog-entry prose" id="${post.id}" aria-labelledby="titulo-${post.id}">
+      <p class="eyebrow"><time datetime="${post.date}">${post.month}</time> · Vida en la academia</p>
+      <h2 id="titulo-${post.id}">${post.title}</h2>
+      <figure class="content-media blog-photo"><img src="${post.image}" alt="${post.alt}" width="1536" height="1024" loading="lazy"><figcaption>Imagen ilustrativa generada con IA.</figcaption></figure>
+      ${post.paragraphs.map(text => `<p>${text}</p>`).join("")}
+      <a class="text-link" href="/contacto">Habla con Educa10 ${icons.arrow}</a>
+    </article>`).join("");
+    return `${pageHero({ title: "Blog", eyebrow: "La vida en Educa10", lead: "Un espacio para compartir las novedades, las experiencias y la ilusión por aprender. Una entrada cada mes para estar más cerca de nuestras familias.", tags: ["Novedades", "Academia", "Familias"] })}
+      <section class="section"><div class="container content-grid"><div class="blog-entries">${entries}</div>
+      <aside class="info-card"><span class="info-card__label">Mes a mes</span><h2 class="blog-archive-title">Nuestro archivo</h2><nav aria-label="Entradas por mes">${blogPosts.map(post => `<a class="text-link" href="#${post.id}">${post.month} ${icons.arrow}</a>`).join("")}</nav><p>Las noticias y los pequeños grandes momentos de Educa10, en un mismo lugar.</p></aside>
+      </div></section>${renderCta()}`;
+  }
+
   function renderPage() {
     const app = document.getElementById("app");
     if (pageId === "inicio") app.innerHTML = renderHome();
     else if (pageId === "quienes-somos") app.innerHTML = renderAbout();
+    else if (pageId === "blog") app.innerHTML = renderBlog();
     else if (pageId === "contacto") app.innerHTML = renderContact();
     else if (["aviso-legal", "privacidad", "cookies"].includes(pageId)) app.innerHTML = renderLegal(pageId);
     else if (pages[pageId]) app.innerHTML = renderGeneric(pages[pageId]);
