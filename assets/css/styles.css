@@ -2029,9 +2029,13 @@ h3 {
 .blog-entries + aside nav { display: grid; gap: 12px; margin-bottom: 20px; }
 
 /* Cierre de la Escuela de Verano 2026. */
-.summer-thanks-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .95fr); align-items: start; gap: clamp(36px, 6vw, 80px); }
-.summer-thanks-poster { margin: 0; }
-.summer-thanks-poster img, .thanks-message img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.summer-thanks-hero__layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr); align-items: center; gap: clamp(36px, 5vw, 72px); }
+.summer-thanks-hero .page-hero__content { max-width: none; }
+.summer-thanks-hero h1 { font-size: clamp(3rem, 4.2vw, 5.1rem); white-space: nowrap; }
+.summer-thanks-hero__poster { margin: 0; }
+.summer-thanks-hero__poster img, .thanks-message img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.summer-thanks-intro { max-width: 900px; }
 .thanks-messages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; }
 .thanks-message { margin: 0; padding: 10px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
-@media (max-width: 800px) { .summer-thanks-intro, .thanks-messages { grid-template-columns: 1fr; } .summer-thanks-poster { order: -1; } }
+@media (max-width: 900px) { .summer-thanks-hero__layout, .thanks-messages { grid-template-columns: 1fr; } .summer-thanks-hero__poster { max-width: 680px; } }
+@media (max-width: 600px) { .summer-thanks-hero h1 { white-space: normal; } }
