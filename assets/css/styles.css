@@ -944,6 +944,21 @@ h3 {
   color: var(--aqua-dark);
 }
 
+.glp-infographics {
+  display: grid;
+  gap: 28px;
+  margin: 34px 0;
+}
+
+.glp-infographics .content-media {
+  margin: 0;
+}
+
+.glp-infographics .content-media img {
+  height: auto;
+  object-fit: contain;
+}
+
 .info-card {
   position: sticky;
   top: 112px;
