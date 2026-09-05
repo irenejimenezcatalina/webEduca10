@@ -32,8 +32,7 @@
       href: "/ingles",
       id: "ingles",
       children: [
-        { label: "Inglés para niños", href: "/ingles-ninos", id: "ingles-ninos" },
-        { label: "Método GLP", href: "/metodo-glp", id: "metodo-glp" },
+        { label: "Inglés para niños · Método GLP", href: "/ingles-ninos", id: "ingles-ninos" },
         { label: "Cambridge", href: "/cambridge", id: "cambridge" },
         { label: "Inglés para adultos", href: "/ingles-adultos", id: "ingles-adultos" }
       ]
@@ -75,10 +74,10 @@
       sections: [
         { title: "Objetivos de las clases", text: "Trabajamos para que el alumnado use el inglés de forma oral y escrita, comprenda textos y mensajes, amplíe su vocabulario y conozca aspectos de la cultura inglesa.", items: ["Comunicarse oralmente y por escrito con mayor fluidez.", "Comprender textos escritos, orales y visuales.", "Aprender jugando y mediante actividades dinámicas.", "Adquirir vocabulario e interpretar palabras nuevas por el contexto.", "Conocer la cultura inglesa para comunicarse mejor."] }
       ],
-      related: ["ingles-ninos", "metodo-glp", "cambridge", "ingles-adultos"]
+      related: ["ingles-ninos", "cambridge", "ingles-adultos"]
     },
     "ingles-ninos": {
-      title: "Inglés para niños",
+      title: "Inglés para niños y Método Great Little People",
       eyebrow: "Clases por edades y niveles",
       lead: "Una forma activa de aprender inglés, desde los primeros años hasta los niveles más avanzados de la etapa escolar.",
       tags: ["Desde 3 años", "Juego", "Comunicación", "Hasta B2"],
@@ -86,14 +85,17 @@
       introTitle: "Aprender jugando y comunicándose",
       intro: [
         "En Educa10 los niños comienzan a relacionarse con el inglés desde los 3 años y pueden continuar su aprendizaje por edades y niveles hasta B2.",
-        "Las actividades lúdicas y los recursos audiovisuales ayudan a trasladar el aprendizaje al uso real del idioma, manteniendo la motivación y favoreciendo la participación en el aula."
+        "Las actividades lúdicas y los recursos audiovisuales ayudan a trasladar el aprendizaje al uso real del idioma, manteniendo la motivación y favoreciendo la participación en el aula.",
+        "Para los niños y niñas de 3 a 7 años incorporamos Great Little People: una metodología 360, íntegramente en inglés y basada en el juego, el movimiento, los materiales sensoriales y los rincones de aprendizaje."
       ],
       highlights: ["Grupos adaptados a la edad", "Comprensión oral y escrita", "Vocabulario y comunicación"],
       sideTitle: "Encuentra su grupo",
       sideText: "Cuéntanos su edad y experiencia previa. Te informaremos de los grupos y plazas disponibles.",
       sections: [
         { title: "Qué queremos conseguir", text: "El objetivo es que el alumnado se comunique con mayor fluidez, comprenda mensajes escritos, orales y visuales, y amplíe su vocabulario de forma progresiva.", items: ["Usar el inglés de forma oral y escrita.", "Aprender de forma dinámica y participativa.", "Comprender el significado de nuevas palabras por el contexto.", "Ganar confianza al expresarse."] },
-        { title: "Inglés desde los 3 años", text: "Para las edades de 3 a 7 años incorporamos Great Little People, una metodología íntegramente en inglés basada en el juego, el movimiento, los materiales sensoriales y el aprendizaje por rincones." }
+        { title: "Inglés desde los 3 años", text: "Great Little People mantiene a los niños motivados y participativos tanto en clase como en casa. La adquisición del idioma se realiza 100% en inglés a través de experiencias activas y significativas." },
+        { title: "Juego, movimiento y sentidos", text: "Los materiales sensoriales y los rincones convierten el vocabulario, la fonética y las habilidades lingüísticas en experiencias divertidas que ayudan a ganar confianza y autoestima." },
+        { title: "Las familias también participan", text: "El seguimiento continuo permite conocer la evolución, los contenidos y los objetivos de cada nivel, con propuestas para seguir aprendiendo y disfrutando en casa." }
       ]
     },
     "metodo-glp": {
@@ -421,9 +423,10 @@
     const mediaBlock = pageId === "ingles-ninos"
       ? `<div class="glp-infographics" aria-label="Metodología Great Little People"><figure class="content-media"><img src="assets/images/metodologia-glp-1-v2.jpg" alt="Infografía sobre la metodología de inglés Great Little People para niños de 3 a 7 años" loading="lazy"></figure><figure class="content-media"><img src="assets/images/metodologia-glp-2-v2.jpg" alt="Infografía de los rincones, materiales y evaluaciones de Great Little People" loading="lazy"></figure></div>`
       : media ? `<figure class="content-media${pageId === "musibaby" ? " content-media--poster" : ""}"><img src="${media[0]}" alt="${media[1]}" loading="lazy">${mediaCaption}</figure>` : "";
+    const schedulesBlock = pageId === "ingles-ninos" ? `<section class="section schedules-section" id="horarios"><div class="container"><div class="section-heading schedules-heading"><div><p class="eyebrow">Curso 2026-2027</p><h2>Horarios de inglés</h2></div><div><p class="lead">Consulta los horarios de las aulas y descarga el documento completo.</p><a class="button button--aqua" href="assets/documents/horarios-ingles-2026-2027.pdf" download>Horarios ${icons.arrow}</a></div></div><div class="schedules-gallery"><figure><a href="assets/images/horario-ingles-aula-1-2026-2027.jpg" target="_blank" rel="noopener"><img src="assets/images/horario-ingles-aula-1-2026-2027.jpg" alt="Horario de inglés del aula 1 para el curso 2026-2027"></a><figcaption>Aula 1</figcaption></figure><figure><a href="assets/images/horario-ingles-aula-2-2026-2027.jpg" target="_blank" rel="noopener"><img src="assets/images/horario-ingles-aula-2-2026-2027.jpg" alt="Horario de inglés del aula 2 para el curso 2026-2027"></a><figcaption>Aula 2</figcaption></figure></div></div></section>` : "";
     const related = page.related ? `<section class="section section--paper-deep"><div class="container"><div class="section-heading"><div><p class="eyebrow">Encuentra tu camino</p><h2>Elige el programa que encaja contigo</h2></div><p class="lead">Cada propuesta conserva la misma mirada cercana y adapta la forma de aprender a su etapa y objetivo.</p></div><div class="subpage-grid">${relatedCards(page.related)}</div></div></section>` : "";
 
-    return `${pageHero(page)}
+    return `${pageHero(page)}${schedulesBlock}
       <section class="section"><div class="container content-grid">
         <article class="prose reveal"><h2>${page.introTitle}</h2>${paragraphs}${mediaBlock}<ul class="check-list">${highlights}</ul>${sections}</article>
         <aside class="info-card reveal"><span class="info-card__label">Te orientamos</span><h3>${page.sideTitle}</h3><p>${page.sideText}</p><a class="button button--aqua" href="/contacto?interes=${encodeURIComponent(page.title)}">Pedir información ${icons.arrow}</a></aside>

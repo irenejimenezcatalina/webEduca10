@@ -960,6 +960,48 @@ h3 {
   object-fit: contain;
 }
 
+.schedules-section {
+  padding-bottom: 72px;
+  background: var(--paper-deep);
+}
+
+.schedules-heading {
+  align-items: end;
+}
+
+.schedules-heading .button {
+  margin-top: 20px;
+}
+
+.schedules-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.schedules-gallery figure {
+  margin: 0;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.schedules-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-md) - 6px);
+}
+
+.schedules-gallery figcaption {
+  padding: 12px 8px 4px;
+  color: var(--ink-soft);
+  font-size: .82rem;
+  font-weight: 800;
+  text-align: center;
+}
+
 .info-card {
   position: sticky;
   top: 112px;
@@ -2080,6 +2122,10 @@ h3 {
 
 @media (max-width: 800px) {
   .team-grid--grouped {
+    grid-template-columns: 1fr;
+  }
+
+  .schedules-gallery {
     grid-template-columns: 1fr;
   }
 }
