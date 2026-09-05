@@ -842,6 +842,23 @@ h3 {
   max-width: 780px;
 }
 
+.page-hero__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 6vw, 80px);
+}
+
+.page-hero__title-row h1 {
+  flex: 1;
+}
+
+.page-hero__title-row img {
+  width: min(34%, 330px);
+  height: auto;
+  object-fit: contain;
+}
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
@@ -929,6 +946,15 @@ h3 {
 .content-media--poster img {
   display: block;
   height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.content-media--certificate img {
+  display: block;
+  width: min(100%, 520px);
+  height: auto;
+  margin: 0 auto;
   aspect-ratio: auto;
   object-fit: contain;
 }
@@ -2127,5 +2153,14 @@ h3 {
 
   .schedules-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .page-hero__title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-hero__title-row img {
+    width: min(72%, 300px);
   }
 }
