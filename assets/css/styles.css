@@ -1088,6 +1088,18 @@ h3 {
   gap: 18px;
 }
 
+.team-grid--grouped {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.team-grid--grouped > :nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.team-grid--grouped > :nth-child(n + 3) {
+  grid-column: span 2;
+}
+
 .team-card {
   overflow: hidden;
   min-height: 210px;
@@ -2055,3 +2067,19 @@ h3 {
 .thanks-message { margin: 0; padding: 10px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 @media (max-width: 900px) { .thanks-messages { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .summer-thanks-hero h1 { white-space: normal; } }
+
+@media (max-width: 1100px) {
+  .team-grid--grouped {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-grid--grouped > :nth-child(n) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .team-grid--grouped {
+    grid-template-columns: 1fr;
+  }
+}
