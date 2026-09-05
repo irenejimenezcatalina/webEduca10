@@ -540,6 +540,16 @@ h3 {
   filter: saturate(0.9) contrast(0.98);
 }
 
+.hero__photo--poster {
+  inset: 0 2% 0 6%;
+  height: 100%;
+  border-radius: 24px;
+  background: var(--white);
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+
 .hero__photo--logo {
   border-radius: 24px;
   padding: clamp(18px, 3vw, 42px);
