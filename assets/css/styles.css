@@ -2027,3 +2027,11 @@ h3 {
 .blog-photo img { display: block; aspect-ratio: 3 / 2; height: auto; }
 .blog-archive-title { font-size: 1.3rem; margin: 12px 0 20px; }
 .blog-entries + aside nav { display: grid; gap: 12px; margin-bottom: 20px; }
+
+/* Cierre de la Escuela de Verano 2026. */
+.summer-thanks-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .95fr); align-items: start; gap: clamp(36px, 6vw, 80px); }
+.summer-thanks-poster { margin: 0; }
+.summer-thanks-poster img, .thanks-message img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.thanks-messages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; }
+.thanks-message { margin: 0; padding: 10px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+@media (max-width: 800px) { .summer-thanks-intro, .thanks-messages { grid-template-columns: 1fr; } .summer-thanks-poster { order: -1; } }
