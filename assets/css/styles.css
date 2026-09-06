@@ -950,6 +950,11 @@ h3 {
   object-fit: contain;
 }
 
+.content-media--adult-poster {
+  width: min(100%, 520px);
+  margin-inline: auto;
+}
+
 .content-media--certificate img {
   display: block;
   width: min(100%, 520px);
