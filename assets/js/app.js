@@ -157,7 +157,105 @@
       ],
       highlights: ["Horario de mañana", "Práctica del idioma", "Atención cercana"],
       sideTitle: "Consulta horarios y plazas",
-      side fina.", "Exploración de técnicas artísticas y procesos creativos."] },
+      sideText: "Cuéntanos tu nivel y tu objetivo para informarte sobre el grupo disponible.",
+      sections: [
+        { title: "Qué trabajamos", text: "Comprensión oral y escrita, expresión, vocabulario y estrategias para comunicarse con más seguridad." },
+        { title: "Por qué en grupos reducidos", text: "El formato facilita la participación, el seguimiento y la adaptación de las actividades a las necesidades del grupo." }
+      ]
+    },
+    "refuerzo-escolar": {
+      title: "Refuerzo escolar",
+      eyebrow: "Clases de repaso",
+      lead: "Sesiones individuales o en grupos de hasta seis alumnos para resolver dudas, comprender las materias y recuperar la confianza.",
+      tags: ["Primaria", "ESO", "Hábitos", "Técnicas de estudio"],
+      introTitle: "Comprender, ganar seguridad y mejorar",
+      intro: [
+        "Disponemos de sesiones de refuerzo de lunes a viernes, de 16:00 a 20:00. Las clases pueden realizarse de forma individual o en grupos de un máximo de seis alumnos.",
+        "Las actividades y estrategias se orientan a corregir dificultades de aprendizaje. Nuestro propósito es que el alumnado entienda lo que estudia, aprenda a buscar soluciones y afronte los exámenes con más eficacia."
+      ],
+      highlights: ["Lunes a viernes, 16:00–20:00", "Individual o máximo 6 alumnos", "Refuerzo positivo"],
+      sideTitle: "Consulta las plazas disponibles",
+      sideText: "Indícanos el curso y las asignaturas que necesitan apoyo para poder orientarte.",
+      sections: [
+        { title: "Objetivos del refuerzo", text: "El trabajo académico se acompaña con objetivos personales que ayudan a cambiar la relación con el aprendizaje.", items: ["Resolver dudas y comprender lo que parecía difícil.", "Recuperar la motivación y el gusto por la asignatura.", "Ganar seguridad y potenciar la autoestima.", "Entender, razonar y aprender a buscar soluciones.", "Rendir con mayor eficacia en exámenes.", "Mejorar y avanzar hacia el objetivo de aprobar."] },
+        { title: "Cuatro bases para estudiar mejor", text: "Además del contenido, atendemos a la motivación, la fijación de conceptos, el lugar de estudio y unos hábitos físicos y de alimentación que favorezcan el aprendizaje." }
+      ],
+      related: ["primaria", "eso", "tecnicas-estudio"]
+    },
+    primaria: {
+      title: "Refuerzo en Primaria",
+      eyebrow: "Clases de repaso",
+      lead: "Apoyo para resolver dudas, afianzar conceptos y ayudar a que cada alumno gane seguridad en su aprendizaje.",
+      tags: ["Primaria", "Comprensión", "Motivación", "Confianza"],
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
+      introTitle: "Un refuerzo que empieza por comprender",
+      intro: [
+        "En las sesiones de refuerzo trabajamos las dudas y dificultades que aparecen durante el curso. Comprender un concepto y ser capaz de explicarlo con sus propias palabras es esencial para fijar el aprendizaje.",
+        "El refuerzo positivo ayuda a recuperar la motivación, mejorar la autoconfianza y afrontar las tareas con una actitud más segura."
+      ],
+      highlights: ["Sesiones individuales", "Grupos de máximo 6", "De lunes a viernes"],
+      sideTitle: "Busca su mejor opción",
+      sideText: "Cuéntanos el curso y las áreas que necesitan refuerzo para informarte de las plazas disponibles.",
+      sections: [
+        { title: "Qué buscamos", text: "Resolver dudas, comprender y razonar, ganar seguridad, potenciar la autoestima y mejorar el rendimiento ante las tareas y los exámenes." },
+        { title: "Hábitos que ayudan", text: "Un lugar de estudio cómodo, horarios estables, descanso, ejercicio y una alimentación saludable también influyen positivamente en el aprendizaje." }
+      ]
+    },
+    eso: {
+      title: "Refuerzo en ESO",
+      eyebrow: "Clases de repaso",
+      lead: "Apoyo académico para comprender las asignaturas, preparar los exámenes y afrontar la etapa con mayor seguridad.",
+      tags: ["ESO", "Asignaturas", "Exámenes", "Autonomía"],
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
+      introTitle: "Entender y razonar antes de memorizar",
+      intro: [
+        "El objetivo del refuerzo no es únicamente aprobar. Trabajamos para que el alumno comprenda las explicaciones, aprenda a buscar soluciones y utilice herramientas que le permitan rendir con más eficacia.",
+        "Las sesiones permiten resolver dudas, fijar conceptos y entrenar antes de los exámenes. El acompañamiento y el refuerzo positivo favorecen la motivación, la seguridad y la autoestima."
+      ],
+      highlights: ["Sesiones individuales", "Grupos de máximo 6", "De lunes a viernes"],
+      sideTitle: "Consulta grupos y horarios",
+      sideText: "Indícanos el curso, las asignaturas y las principales dificultades para informarte.",
+      sections: [
+        { title: "Objetivos académicos y personales", text: "Resolver dudas y mejorar los resultados se combina con otros objetivos: recuperar la motivación, ganar determinación y reforzar la confianza en las propias capacidades." },
+        { title: "Fijar los conceptos", text: "Comprender un contenido y ser capaz de expresarlo con palabras propias es la base para consolidarlo y aplicarlo en situaciones nuevas." }
+      ]
+    },
+    "tecnicas-estudio": {
+      title: "Técnicas de estudio",
+      eyebrow: "Aprender a aprender",
+      lead: "Herramientas para adoptar una actitud activa ante el estudio, facilitar el aprendizaje y mejorar los resultados.",
+      tags: ["Planificación", "Comprensión", "Memoria", "Repaso"],
+      parent: { label: "Refuerzo escolar", href: "/refuerzo-escolar" },
+      introTitle: "Desarrollar una forma propia de estudiar",
+      intro: [
+        "Las técnicas de estudio buscan una actitud activa y el desarrollo de herramientas que faciliten el trabajo y ayuden a mejorar los logros académicos.",
+        "La motivación activa la conducta necesaria para alcanzar una meta. A partir de ella trabajamos la comprensión, la fijación de conceptos y la creación de condiciones adecuadas para estudiar."
+      ],
+      highlights: ["Motivación", "Comprensión", "Organización", "Hábitos saludables"],
+      sideTitle: "Mejorar la forma de estudiar",
+      sideText: "Cuéntanos qué dificultades aparecen al organizar, comprender o preparar los exámenes.",
+      sections: [
+        { title: "Motivación", text: "Trabajamos metas concretas que ayuden a activar y mantener el esfuerzo necesario para avanzar." },
+        { title: "Fijación de conceptos", text: "Comprender un contenido y expresarlo con palabras propias permite asimilarlo de forma más sólida." },
+        { title: "Lugar de estudio", text: "Buscamos un espacio cómodo y protegido, adecuado para concentrarse y convertir el trabajo en una rutina." },
+        { title: "Estado físico y alimentación", text: "Los horarios, el ejercicio, dormir las horas necesarias y una alimentación saludable favorecen el estudio." }
+      ]
+    },
+    talleres: {
+      title: "Talleres infantiles",
+      eyebrow: "Creatividad y diversión",
+      lead: "Actividades para disfrutar, experimentar y aprender en un espacio seguro acompañado por profesionales.",
+      tags: ["Creatividad", "Juego cooperativo", "Autonomía", "Motricidad fina"],
+      introTitle: "La creatividad es la inteligencia divirtiéndose",
+      intro: [
+        "En Educa10 organizamos diferentes actividades con un objetivo común: que los niños aprendan y sonrían a través del placer y la diversión.",
+        "Cuidamos la elección de cada propuesta para que, además de resultar divertida y apasionante, se desarrolle en un espacio seguro y esté dirigida por profesionales."
+      ],
+      highlights: ["Compañerismo", "Imaginación", "Comunicación", "Exploración"],
+      sideTitle: "Consulta los próximos talleres",
+      sideText: "Te informamos sobre la programación, las edades, los horarios y las plazas disponibles.",
+      sections: [
+        { title: "Qué fomentamos", text: "Los talleres favorecen el compañerismo, el juego cooperativo y el aprendizaje mediante la experiencia.", items: ["Creatividad e imaginación.", "Autonomía y comunicación.", "Estimulación de la motricidad fina.", "Exploración de técnicas artísticas y procesos creativos."] },
         { title: "Un espacio para experimentar", text: "Los niños pueden probar, crear y desarrollar su imaginación mientras comparten la actividad con el grupo." }
       ],
       related: ["musibaby"]
@@ -559,3 +657,4 @@
   setupCookieBanner();
   setupReveals();
 })();
+
