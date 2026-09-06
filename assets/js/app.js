@@ -1,3 +1,92 @@
+(function () {
+  "use strict";
+
+  const pageId = document.body.dataset.page || "inicio";
+  const email = "info@academiaeduca10.com";
+  const address = "Calle Cala de Bou 50, 07829 Sant Josep de sa Talaia";
+  const fiscalAddress = "S’Hort d’en Serral s/n, 07829 Sant Agustí des Vedrà (Sant Josep)";
+  const mobilePhone = "608 687 486";
+  const landlinePhone = "971 345 511";
+
+  const icons = {
+    arrow: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    chevron: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg>',
+    menu: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+    close: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+    crumb: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>'
+  };
+
+  const socialProfiles = [
+    { label: "WhatsApp", href: "https://wa.me/34608687486", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/><path d="M8.6 8.5c.4 2.8 2.2 4.6 5 5.1"/></svg>' },
+    { label: "Instagram", href: "https://www.instagram.com/educa.10/", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.7"/><circle cx="17.4" cy="6.7" r=".8" fill="currentColor" stroke="none"/></svg>' },
+    { label: "Facebook", href: "https://www.facebook.com/educa10ibz/", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M14.2 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H8V13h2.8v8h3.4Z"/></svg>' },
+    { label: "YouTube", href: "https://www.youtube.com/watch?v=wdb3w7GIZSU", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5.5" width="18" height="13" rx="4"/><path fill="currentColor" stroke="none" d="m10 9 5 3-5 3Z"/></svg>' },
+    { label: "Email", href: `mailto:${email}`, external: false, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>' }
+  ];
+
+  const navigation = [
+    { label: "Inicio", href: "/", id: "inicio" },
+    { label: "Quiénes somos", href: "/quienes-somos", id: "quienes-somos" },
+    {
+      label: "Inglés",
+      href: "/ingles",
+      id: "ingles",
+      children: [
+        { label: "Inglés para niños · Método GLP", href: "/ingles-ninos", id: "ingles-ninos" },
+        { label: "Cambridge", href: "/cambridge", id: "cambridge" },
+        { label: "Inglés para adultos", href: "/ingles-adultos", id: "ingles-adultos" }
+      ]
+    },
+    {
+      label: "Refuerzo escolar",
+      href: "/refuerzo-escolar",
+      id: "refuerzo-escolar",
+      children: [
+        { label: "Primaria y ESO", href: "/refuerzo-escolar", id: "refuerzo-escolar" },
+        { label: "Técnicas de estudio", href: "/tecnicas-estudio", id: "tecnicas-estudio" }
+      ]
+    },
+    {
+      label: "Talleres",
+      href: "/talleres",
+      id: "talleres",
+      children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
+    },
+    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" },
+    { label: "Blog", href: "/blog", id: "blog" }
+  ];
+
+  const pages = {
+    ingles: {
+      title: "Clases de inglés para todas las edades",
+      eyebrow: "Inglés en Educa10",
+      lead: "Grupos desde los 3 años hasta el nivel B2 para aprender a comprender, comunicarse y utilizar el inglés con confianza.",
+      tags: ["Desde 3 años", "Hasta B2", "Cambridge", "Método GLP"],
+      introTitle: "Aprender inglés para utilizarlo",
+      intro: [
+        "Contamos con grupos de lunes a viernes, de 16:00 a 20:30. El recorrido comienza a los 3 años con Great Little People y continúa por diferentes edades y niveles hasta B2.",
+        "Nuestros profesores integran el idioma mediante distintas metodologías para que su uso resulte cada vez más natural. También somos centro formador para los exámenes Cambridge desde Pre A1 Starters hasta B2 First for Schools."
+      ],
+      highlights: ["Grupos por edad y nivel", "De lunes a viernes", "Aprendizaje dinámico y participativo"],
+      sideTitle: "Consulta grupos y plazas",
+      sideText: "Indícanos la edad y el nivel aproximado para informarte sobre las opciones y la disponibilidad actual.",
+      sections: [
+        { title: "Objetivos de las clases", text: "Trabajamos para que el alumnado use el inglés de forma oral y escrita, comprenda textos y mensajes, amplíe su vocabulario y conozca aspectos de la cultura inglesa.", items: ["Comunicarse oralmente y por escrito con mayor fluidez.", "Comprender textos escritos, orales y visuales.", "Aprender jugando y mediante actividades dinámicas.", "Adquirir vocabulario e interpretar palabras nuevas por el contexto.", "Conocer la cultura inglesa para comunicarse mejor."] }
+      ],
+      related: ["ingles-ninos", "cambridge", "ingles-adultos"]
+    },
+    "ingles-ninos": {
+      title: "Inglés para niños y Método Great Little People",
+      eyebrow: "Clases por edades y niveles",
+      lead: "Una forma activa de aprender inglés, desde los primeros años hasta los niveles más avanzados de la etapa escolar.",
+      tags: ["Desde 3 años", "Juego", "Comunicación", "Hasta B2"],
+      parent: { label: "Inglés", href: "/ingles" },
+      introTitle: "Aprender jugando y comunicándose",
+      intro: [
+        "En Educa10 los niños comienzan a relacionarse con el inglés desde los 3 años y pueden continuar su aprendizaje por edades y niveles hasta B2.",
+        "Las actividades lúdicas y los recursos audiovisuales ayudan a trasladar el aprendizaje al uso real del idioma, manteniendo la motivación y favoreciendo la participación en el aula.",
+        "Para los niños y niñas de 3 a 7 años incorporamos Great Little People: una metodología 360, íntegramente en inglés y basada en el juego, el movimiento, los materiales sensoriales y los rincones de aprendizaje."
+      ],
       highlights: ["Grupos adaptados a la edad", "Comprensión oral y escrita", "Vocabulario y comunicación"],
       sideTitle: "Encuentra su grupo",
       sideText: "Cuéntanos su edad y experiencia previa. Te informaremos de los grupos y plazas disponibles.",
@@ -74,7 +163,7 @@
       ]
     },
     "refuerzo-escolar": {
-      title: "Refuerzo escolar",
+      title: "Refuerzo escolar: Primaria y ESO",
       eyebrow: "Clases de repaso",
       lead: "Sesiones individuales o en grupos de hasta seis alumnos para resolver dudas, comprender las materias y recuperar la confianza.",
       tags: ["Primaria", "ESO", "Hábitos", "Técnicas de estudio"],
@@ -87,10 +176,12 @@
       sideTitle: "Consulta las plazas disponibles",
       sideText: "Indícanos el curso y las asignaturas que necesitan apoyo para poder orientarte.",
       sections: [
+        { title: "Refuerzo en Primaria", text: "Acompañamos al alumnado para resolver dudas, afianzar conceptos y ganar seguridad en su aprendizaje. Trabajamos la comprensión antes que la memorización y utilizamos el refuerzo positivo para recuperar la motivación y afrontar las tareas con confianza.", items: ["Comprender y explicar los contenidos con sus propias palabras.", "Resolver dudas y consolidar las materias del curso.", "Mejorar la motivación, la autonomía y la autoestima.", "Crear hábitos de estudio estables y saludables."] },
+        { title: "Refuerzo en ESO", text: "Ofrecemos apoyo académico para comprender las asignaturas, preparar los exámenes y avanzar con mayor autonomía. Las sesiones permiten fijar conceptos, entrenar la resolución de ejercicios y aprender estrategias para afrontar esta etapa con seguridad.", items: ["Entender y razonar antes de memorizar.", "Preparar exámenes y mejorar el rendimiento.", "Organizar las tareas y el tiempo de estudio.", "Ganar confianza en las propias capacidades."] },
         { title: "Objetivos del refuerzo", text: "El trabajo académico se acompaña con objetivos personales que ayudan a cambiar la relación con el aprendizaje.", items: ["Resolver dudas y comprender lo que parecía difícil.", "Recuperar la motivación y el gusto por la asignatura.", "Ganar seguridad y potenciar la autoestima.", "Entender, razonar y aprender a buscar soluciones.", "Rendir con mayor eficacia en exámenes.", "Mejorar y avanzar hacia el objetivo de aprobar."] },
         { title: "Cuatro bases para estudiar mejor", text: "Además del contenido, atendemos a la motivación, la fijación de conceptos, el lugar de estudio y unos hábitos físicos y de alimentación que favorezcan el aprendizaje." }
       ],
-      related: ["primaria", "eso", "tecnicas-estudio"]
+      related: ["tecnicas-estudio"]
     },
     primaria: {
       title: "Refuerzo en Primaria",

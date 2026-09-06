@@ -7,6 +7,27 @@
       "source": "/index",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/primaria",
+      "destination": "/refuerzo-escolar",
+      "permanent": true
+    },
+    {
+      "source": "/primaria.html",
+      "destination": "/refuerzo-escolar",
+      "permanent": true
+    },
+    {
+      "source": "/eso",
+      "destination": "/refuerzo-escolar",
+      "permanent": true
+    },
+    {
+      "source": "/eso.html",
+      "destination": "/refuerzo-escolar",
+      "permanent": true
     }
   ]
 }
+
