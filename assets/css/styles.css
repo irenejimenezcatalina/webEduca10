@@ -1062,6 +1062,12 @@ h3 {
   margin-top: 12px;
 }
 
+.schedules-gallery--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
 .page-sidebar {
   position: sticky;
   top: 112px;
