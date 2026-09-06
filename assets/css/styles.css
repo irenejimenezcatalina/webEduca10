@@ -1057,6 +1057,37 @@ h3 {
   margin-top: 12px;
 }
 
+.page-sidebar {
+  position: sticky;
+  top: 112px;
+  display: grid;
+  gap: 32px;
+}
+
+.page-sidebar .info-card {
+  position: static;
+}
+
+.cambridge-cefr {
+  margin: 0;
+  text-align: center;
+}
+
+.cambridge-cefr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.cambridge-cefr figcaption {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
 .subpage-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1965,6 +1996,15 @@ h3 {
 
   .info-card {
     position: static;
+  }
+
+  .page-sidebar {
+    position: static;
+  }
+
+  .cambridge-cefr {
+    width: min(100%, 560px);
+    margin-inline: auto;
   }
 
   .steps {
