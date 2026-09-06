@@ -2180,6 +2180,8 @@ h3 {
 .summer-thanks-hero__poster { width: min(100%, 920px); margin: 0; }
 .summer-thanks-hero__poster img, .thanks-message img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 .summer-thanks-intro { max-width: 900px; }
+.summer-satisfaction { width: min(100%, 760px); margin: 46px auto 0; }
+.summer-satisfaction img { display: block; width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 .thanks-messages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; }
 .thanks-message { margin: 0; padding: 10px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 @media (max-width: 900px) { .thanks-messages { grid-template-columns: 1fr; } }

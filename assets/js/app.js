@@ -1,93 +1,3 @@
-(function () {
-  "use strict";
-
-  const pageId = document.body.dataset.page || "inicio";
-  const email = "info@academiaeduca10.com";
-  const address = "Calle Cala de Bou 50, 07829 Sant Josep de sa Talaia";
-  const fiscalAddress = "S’Hort d’en Serral s/n, 07829 Sant Agustí des Vedrà (Sant Josep)";
-  const mobilePhone = "608 687 486";
-  const landlinePhone = "971 345 511";
-
-  const icons = {
-    arrow: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
-    chevron: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 10 5 5 5-5"/></svg>',
-    menu: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
-    close: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg>',
-    crumb: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>'
-  };
-
-  const socialProfiles = [
-    { label: "WhatsApp", href: "https://wa.me/34608687486", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/><path d="M8.6 8.5c.4 2.8 2.2 4.6 5 5.1"/></svg>' },
-    { label: "Instagram", href: "https://www.instagram.com/educa.10/", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.7"/><circle cx="17.4" cy="6.7" r=".8" fill="currentColor" stroke="none"/></svg>' },
-    { label: "Facebook", href: "https://www.facebook.com/educa10ibz/", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M14.2 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H8V13h2.8v8h3.4Z"/></svg>' },
-    { label: "YouTube", href: "https://www.youtube.com/watch?v=wdb3w7GIZSU", external: true, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5.5" width="18" height="13" rx="4"/><path fill="currentColor" stroke="none" d="m10 9 5 3-5 3Z"/></svg>' },
-    { label: "Email", href: `mailto:${email}`, external: false, icon: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>' }
-  ];
-
-  const navigation = [
-    { label: "Inicio", href: "/", id: "inicio" },
-    { label: "Quiénes somos", href: "/quienes-somos", id: "quienes-somos" },
-    {
-      label: "Inglés",
-      href: "/ingles",
-      id: "ingles",
-      children: [
-        { label: "Inglés para niños · Método GLP", href: "/ingles-ninos", id: "ingles-ninos" },
-        { label: "Cambridge", href: "/cambridge", id: "cambridge" },
-        { label: "Inglés para adultos", href: "/ingles-adultos", id: "ingles-adultos" }
-      ]
-    },
-    {
-      label: "Refuerzo escolar",
-      href: "/refuerzo-escolar",
-      id: "refuerzo-escolar",
-      children: [
-        { label: "Primaria", href: "/primaria", id: "primaria" },
-        { label: "ESO", href: "/eso", id: "eso" },
-        { label: "Técnicas de estudio", href: "/tecnicas-estudio", id: "tecnicas-estudio" }
-      ]
-    },
-    {
-      label: "Talleres",
-      href: "/talleres",
-      id: "talleres",
-      children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
-    },
-    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" },
-    { label: "Blog", href: "/blog", id: "blog" }
-  ];
-
-  const pages = {
-    ingles: {
-      title: "Clases de inglés para todas las edades",
-      eyebrow: "Inglés en Educa10",
-      lead: "Grupos desde los 3 años hasta el nivel B2 para aprender a comprender, comunicarse y utilizar el inglés con confianza.",
-      tags: ["Desde 3 años", "Hasta B2", "Cambridge", "Método GLP"],
-      introTitle: "Aprender inglés para utilizarlo",
-      intro: [
-        "Contamos con grupos de lunes a viernes, de 16:00 a 20:30. El recorrido comienza a los 3 años con Great Little People y continúa por diferentes edades y niveles hasta B2.",
-        "Nuestros profesores integran el idioma mediante distintas metodologías para que su uso resulte cada vez más natural. También somos centro formador para los exámenes Cambridge desde Pre A1 Starters hasta B2 First for Schools."
-      ],
-      highlights: ["Grupos por edad y nivel", "De lunes a viernes", "Aprendizaje dinámico y participativo"],
-      sideTitle: "Consulta grupos y plazas",
-      sideText: "Indícanos la edad y el nivel aproximado para informarte sobre las opciones y la disponibilidad actual.",
-      sections: [
-        { title: "Objetivos de las clases", text: "Trabajamos para que el alumnado use el inglés de forma oral y escrita, comprenda textos y mensajes, amplíe su vocabulario y conozca aspectos de la cultura inglesa.", items: ["Comunicarse oralmente y por escrito con mayor fluidez.", "Comprender textos escritos, orales y visuales.", "Aprender jugando y mediante actividades dinámicas.", "Adquirir vocabulario e interpretar palabras nuevas por el contexto.", "Conocer la cultura inglesa para comunicarse mejor."] }
-      ],
-      related: ["ingles-ninos", "cambridge", "ingles-adultos"]
-    },
-    "ingles-ninos": {
-      title: "Inglés para niños y Método Great Little People",
-      eyebrow: "Clases por edades y niveles",
-      lead: "Una forma activa de aprender inglés, desde los primeros años hasta los niveles más avanzados de la etapa escolar.",
-      tags: ["Desde 3 años", "Juego", "Comunicación", "Hasta B2"],
-      parent: { label: "Inglés", href: "/ingles" },
-      introTitle: "Aprender jugando y comunicándose",
-      intro: [
-        "En Educa10 los niños comienzan a relacionarse con el inglés desde los 3 años y pueden continuar su aprendizaje por edades y niveles hasta B2.",
-        "Las actividades lúdicas y los recursos audiovisuales ayudan a trasladar el aprendizaje al uso real del idioma, manteniendo la motivación y favoreciendo la participación en el aula.",
-        "Para los niños y niñas de 3 a 7 años incorporamos Great Little People: una metodología 360, íntegramente en inglés y basada en el juego, el movimiento, los materiales sensoriales y los rincones de aprendizaje."
-      ],
       highlights: ["Grupos adaptados a la edad", "Comprensión oral y escrita", "Vocabulario y comunicación"],
       sideTitle: "Encuentra su grupo",
       sideText: "Cuéntanos su edad y experiencia previa. Te informaremos de los grupos y plazas disponibles.",
@@ -518,6 +428,7 @@
     return `${summerHero}
       <section class="section"><div class="container summer-thanks-intro">
         <article class="prose reveal"><p class="eyebrow">Gracias por vuestra confianza</p><h2>Un verano que hemos vivido juntos</h2><p>A todas las familias, gracias por confiar en Educa10 y por dejarnos acompañar a vuestros pequeños durante estas semanas. Para nosotros ha sido un privilegio ver cómo aprendían, crecían, compartían y disfrutaban cada día.</p><p>Gracias también a <strong>Fit Food</strong>, que este año se ha sumado por primera vez a nuestra Escuela de Verano con su servicio de catering. Valoramos muchísimo vuestra dedicación y vuestra participación en esta experiencia.</p><p>Nuestro agradecimiento se extiende a todas las personas que nos han visitado y han llenado la escuela de propuestas especiales: <strong>Aniko, Mago Lluc, Ana Santos</strong> y todas las personas que compartieron con los niños sus talleres, su creatividad y su ilusión.</p><p>Y, sobre todo, gracias a nuestras <strong>monitoras y a la directora de la escuela</strong>. Vuestra entrega, cariño, paciencia y enorme trabajo diario han hecho posible este verano. Sois el corazón de esta experiencia.</p><p>Nos despedimos con mucha emoción y con ganas de volver a encontrarnos. <strong>¡Nos vemos en 2027!</strong></p></article>
+        <figure class="summer-satisfaction reveal"><img src="assets/images/informe-satisfaccion-escuela-verano-2026.jpg" alt="Informe de satisfacción de las familias de la Escuela de Verano 2026 de Educa10" loading="lazy"></figure>
       </div></section>
       <section class="section section--paper-deep"><div class="container"><div class="section-heading"><div><p class="eyebrow">Palabras que nos emocionan</p><h2>Mensajes de nuestras familias</h2></div><p class="lead">Compartimos algunos de los mensajes de agradecimiento que recibimos por WhatsApp al terminar la escuela.</p></div><div class="thanks-messages">${messages}</div></div></section>
       ${renderCta()}`;
