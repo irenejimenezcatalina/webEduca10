@@ -1246,6 +1246,13 @@ h3 {
   object-position: center 22%;
 }
 
+.team-card--rosa img {
+  padding: 24px 44px;
+  background: var(--white);
+  object-fit: contain;
+  object-position: center;
+}
+
 .team-card__body {
   padding: 25px;
 }
