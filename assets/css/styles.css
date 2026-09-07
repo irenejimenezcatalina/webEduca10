@@ -1089,8 +1089,13 @@ h3 {
 }
 
 .cambridge-cefr {
-  margin: 0;
+  width: min(100%, 760px);
+  margin: 0 auto;
   text-align: center;
+}
+
+.cambridge-cefr-section {
+  padding-bottom: 0;
 }
 
 .cambridge-cefr img {
