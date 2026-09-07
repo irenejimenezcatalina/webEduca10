@@ -2,7 +2,7 @@
   "use strict";
 
   const pageId = document.body.dataset.page || "inicio";
-  const email = "info@academiaeduca10.com";
+  const email = "educa10centromultidisciplinar@gmail.com";
   const address = "Calle Cala de Bou 50, 07829 Sant Josep de sa Talaia";
   const fiscalAddress = "S’Hort d’en Serral s/n, 07829 Sant Agustí des Vedrà (Sant Josep)";
   const mobilePhone = "608 687 486";
@@ -664,4 +664,3 @@
   setupCookieBanner();
   setupReveals();
 })();
-
