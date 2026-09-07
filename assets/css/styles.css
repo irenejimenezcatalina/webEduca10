@@ -491,6 +491,10 @@ h3 {
   min-width: 0;
 }
 
+.hero__mobile-poster {
+  display: none;
+}
+
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
@@ -1977,7 +1981,16 @@ h3 {
   }
 
   .hero__visual {
-    min-height: 520px;
+    display: none;
+  }
+
+  .hero__mobile-poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 26px 0 34px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
   }
 
   .hero__blob {
