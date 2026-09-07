@@ -348,7 +348,7 @@
       }
 
       const children = item.children.map((child) => `<a href="${child.href}" class="${child.id === pageId ? "is-active" : ""}" ${child.id === pageId ? 'aria-current="page"' : ""}>${child.label}</a>`).join("");
-      return `<details class="nav-dropdown ${groupIsActive(item) ? "is-active" : ""}"><summary>${item.label}${icons.chevron}</summary><div class="nav-dropdown__menu">${children}</div></details>`;
+      return `<details class="nav-dropdown ${groupIsActive(item) ? "is-active" : ""}"><summary><a class="nav-dropdown__parent-link" href="${item.href}" ${item.id === pageId ? 'aria-current="page"' : ""}>${item.label}</a>${icons.chevron}</summary><div class="nav-dropdown__menu">${children}</div></details>`;
     }).join("");
   }
 
@@ -359,7 +359,7 @@
       }
 
       const children = item.children.map((child) => `<a href="${child.href}" class="${child.id === pageId ? "is-active" : ""}" ${child.id === pageId ? 'aria-current="page"' : ""}>${child.label}</a>`).join("");
-      return `<details ${groupIsActive(item) ? "open" : ""}><summary>${item.label}${icons.chevron}</summary><div class="mobile-nav__children">${children}</div></details>`;
+      return `<details ${groupIsActive(item) ? "open" : ""}><summary><a class="nav-dropdown__parent-link" href="${item.href}" ${item.id === pageId ? 'aria-current="page"' : ""}>${item.label}</a>${icons.chevron}</summary><div class="mobile-nav__children">${children}</div></details>`;
     }).join("");
   }
 
@@ -426,7 +426,7 @@
     const mediaBlock = pageId === "ingles-ninos"
       ? `<div class="glp-infographics" aria-label="Metodología Great Little People"><figure class="content-media"><img src="assets/images/metodologia-glp-1-v2.jpg" alt="Infografía sobre la metodología de inglés Great Little People para niños de 3 a 7 años" loading="lazy"></figure><figure class="content-media"><img src="assets/images/metodologia-glp-2-v2.jpg" alt="Infografía de los rincones, materiales y evaluaciones de Great Little People" loading="lazy"></figure></div>`
       : media ? `<figure class="content-media${pageId === "musibaby" ? " content-media--poster" : ""}${pageId === "ingles-adultos" ? " content-media--poster content-media--adult-poster" : ""}${pageId === "cambridge" ? " content-media--certificate" : ""}"><img src="${media[0]}" alt="${media[1]}" loading="lazy">${mediaCaption}</figure>` : "";
-    const schedulesBlock = pageId === "ingles-ninos"
+    const schedulesBlock = pageId === "ingles"
       ? `<section class="section schedules-section" id="horarios"><div class="container"><div class="section-heading schedules-heading"><div><p class="eyebrow">Curso 2026-2027</p><h2>Horarios de inglés</h2></div><div><p class="lead">Consulta los horarios de las aulas y descarga el documento completo.</p><a class="button button--aqua" href="assets/documents/horarios-ingles-2026-2027.pdf" download>Horarios ${icons.arrow}</a></div></div><div class="schedules-gallery"><figure><a href="assets/images/horario-ingles-aula-1-2026-2027.jpg" target="_blank" rel="noopener"><img src="assets/images/horario-ingles-aula-1-2026-2027.jpg" alt="Horario de inglés del aula 1 para el curso 2026-2027"></a><figcaption>Aula 1</figcaption></figure><figure><a href="assets/images/horario-ingles-aula-2-2026-2027.jpg" target="_blank" rel="noopener"><img src="assets/images/horario-ingles-aula-2-2026-2027.jpg" alt="Horario de inglés del aula 2 para el curso 2026-2027"></a><figcaption>Aula 2</figcaption></figure></div></div></section>`
       : pageId === "refuerzo-escolar"
         ? `<section class="section schedules-section" id="horarios"><div class="container"><div class="section-heading schedules-heading"><div><p class="eyebrow">Curso 2026-2027</p><h2>Horarios de Refuerzo Escolar</h2></div><div><p class="lead">Consulta los grupos y horarios de Refuerzo Escolar y Técnicas de Estudio.</p><a class="button button--aqua" href="assets/images/horario-refuerzo-escolar-2026-2027.jpg" target="_blank" rel="noopener">Horarios ${icons.arrow}</a></div></div><div class="schedules-gallery schedules-gallery--single"><figure><a href="assets/images/horario-refuerzo-escolar-2026-2027.jpg" target="_blank" rel="noopener"><img src="assets/images/horario-refuerzo-escolar-2026-2027.jpg" alt="Horario de Refuerzo Escolar y Técnicas de Estudio para el curso 2026-2027"></a><figcaption>Refuerzo Escolar · Curso 2026-2027</figcaption></figure></div></div></section>`
