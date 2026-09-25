@@ -462,6 +462,15 @@ h3 {
   align-items: center;
 }
 
+.hero__grid--single {
+  grid-template-columns: minmax(0, 900px);
+  justify-content: center;
+}
+
+.hero__grid--single .hero__copy {
+  width: 100%;
+}
+
 .hero h1 {
   max-width: 770px;
   font-size: clamp(3.4rem, 7.4vw, 7.2rem);
