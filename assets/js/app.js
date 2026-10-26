@@ -47,73 +47,7 @@
       ]
     },
     {
-      label: "Talleres",
-      href: "/talleres",
-      id: "talleres",
-      children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
-    },
-    { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" },
-    { label: "Blog", href: "/blog", id: "blog" }
-  ];
-
-  const pages = {
-    ingles: {
-      title: "Clases de inglés para todas las edades",
-      eyebrow: "Inglés en Educa10",
-      lead: "Grupos desde los 3 años hasta el nivel B2 para aprender a comprender, comunicarse y utilizar el inglés con confianza.",
-      tags: ["Desde 3 años", "Hasta B2", "Cambridge", "Método GLP"],
-      introTitle: "Aprender inglés para utilizarlo",
-      intro: [
-        "Contamos con grupos de lunes a viernes, de 16:00 a 20:30. El recorrido comienza a los 3 años con Great Little People y continúa por diferentes edades y niveles hasta B2.",
-        "Nuestros profesores integran el idioma mediante distintas metodologías para que su uso resulte cada vez más natural. También somos centro formador para los exámenes Cambridge desde Pre A1 Starters hasta B2 First for Schools."
-      ],
-      highlights: ["Grupos por edad y nivel", "De lunes a viernes", "Aprendizaje dinámico y participativo"],
-      sideTitle: "Consulta grupos y plazas",
-      sideText: "Indícanos la edad y el nivel aproximado para informarte sobre las opciones y la disponibilidad actual.",
-      sections: [
-        { title: "Objetivos de las clases", text: "Trabajamos para que el alumnado use el inglés de forma oral y escrita, comprenda textos y mensajes, amplíe su vocabulario y conozca aspectos de la cultura inglesa.", items: ["Comunicarse oralmente y por escrito con mayor fluidez.", "Comprender textos escritos, orales y visuales.", "Aprender jugando y mediante actividades dinámicas.", "Adquirir vocabulario e interpretar palabras nuevas por el contexto.", "Conocer la cultura inglesa para comunicarse mejor."] }
-      ],
-      related: ["ingles-ninos", "cambridge", "ingles-adultos"]
-    },
-    "ingles-ninos": {
-      title: "Inglés para niños y Método Great Little People",
-      eyebrow: "Clases por edades y niveles",
-      lead: "Una forma activa de aprender inglés, desde los primeros años hasta los niveles más avanzados de la etapa escolar.",
-      tags: ["Desde 3 años", "Juego", "Comunicación", "Hasta B2"],
-      parent: { label: "Inglés", href: "/ingles" },
-      introTitle: "Aprender jugando y comunicándose",
-      intro: [
-        "En Educa10 los niños comienzan a relacionarse con el inglés desde los 3 años y pueden continuar su aprendizaje por edades y niveles hasta B2.",
-        "Las actividades lúdicas y los recursos audiovisuales ayudan a trasladar el aprendizaje al uso real del idioma, manteniendo la motivación y favoreciendo la participación en el aula.",
-        "Para los niños y niñas de 3 a 7 años incorporamos Great Little People: una metodología 360, íntegramente en inglés y basada en el juego, el movimiento, los materiales sensoriales y los rincones de aprendizaje."
-      ],
-      highlights: ["Grupos adaptados a la edad", "Comprensión oral y escrita", "Vocabulario y comunicación"],
-      sideTitle: "Encuentra su grupo",
-      sideText: "Cuéntanos su edad y experiencia previa. Te informaremos de los grupos y plazas disponibles.",
-      sections: [
-        { title: "Qué queremos conseguir", text: "El objetivo es que el alumnado se comunique con mayor fluidez, comprenda mensajes escritos, orales y visuales, y amplíe su vocabulario de forma progresiva.", items: ["Usar el inglés de forma oral y escrita.", "Aprender de forma dinámica y participativa.", "Comprender el significado de nuevas palabras por el contexto.", "Ganar confianza al expresarse."] },
-        { title: "Inglés desde los 3 años", text: "Great Little People mantiene a los niños motivados y participativos tanto en clase como en casa. La adquisición del idioma se realiza 100% en inglés a través de experiencias activas y significativas." },
-        { title: "Juego, movimiento y sentidos", text: "Los materiales sensoriales y los rincones convierten el vocabulario, la fonética y las habilidades lingüísticas en experiencias divertidas que ayudan a ganar confianza y autoestima." },
-        { title: "Las familias también participan", text: "El seguimiento continuo permite conocer la evolución, los contenidos y los objetivos de cada nivel, con propuestas para seguir aprendiendo y disfrutando en casa." }
-      ]
-    },
-    "metodo-glp": {
-      title: "Método Great Little People",
-      eyebrow: "Nuevo método de inglés",
-      lead: "Aprendizaje 360, íntegramente en inglés y basado en el juego para niños y niñas de 3 a 7 años.",
-      tags: ["3–7 años", "100% en inglés", "Juego", "Material sensorial"],
-      parent: { label: "Inglés", href: "/ingles" },
-      introTitle: "Una metodología para el aula y para casa",
-      intro: [
-        "Great Little People ofrece una metodología efectiva para enseñar inglés durante una etapa especialmente importante. Está diseñada para mantener a los niños motivados y participativos tanto en clase como en casa.",
-        "La adquisición del idioma se realiza 100% en inglés a través de materiales sensoriales, movimiento, diversión y una organización por corners o rincones de aprendizaje."
-      ],
-      highlights: ["De 3 a 7 años", "Metodología 360", "Seguimiento para las familias"],
-      sideTitle: "Conoce el método",
-      sideText: "Te explicamos los niveles, los materiales y cómo continuar la rutina de inglés desde casa.",
-      sections: [
-        { title: "Aprender de forma natural", text: "Comenzar desde pequeños favorece un aprendizaje natural del idioma. La interacción y el juego ayudan a que los niños ganen confianza y autoestima mientras aprenden." },
-        { title: "Juego, movimiento y sentidos", text: "Los materiales sensoriales y los rincones convierten vocabulario, fonética y habilidades lingüísticas en experiencias activas y significativas." },
+      lalos rincones convierten vocabulario, fonética y habilidades lingüísticas en experiencias activas y significativas." },
         { title: "Las familias también participan", text: "El seguimiento continuo permite conocer la evolución, los contenidos y los objetivos de cada nivel, con propuestas para seguir aprendiendo y disfrutando en casa." }
       ]
     },
@@ -337,6 +271,11 @@
     return `<div class="social-links ${modifier}" aria-label="Redes sociales y contacto de Educa10">${links}</div>`;
   }
 
+  function renderHomeSocialBar() {
+    const links = socialProfiles.filter((profile) => profile.label !== "Email").map((profile) => `<a class="home-social-bar__link" href="${profile.href}" ${profile.external ? 'target="_blank" rel="noopener"' : ""} aria-label="Seguir a Educa10 en ${profile.label}">${profile.icon}<span>${profile.label}</span></a>`).join("");
+    return `<aside class="home-social-bar" aria-label="Redes sociales de Educa10"><div class="container home-social-bar__inner"><p>Síguenos y descubre el día a día de Educa10</p><div class="home-social-bar__links">${links}</div></div></aside>`;
+  }
+
   function groupIsActive(item) {
     return item.id === pageId || (item.children || []).some((child) => child.id === pageId);
   }
@@ -445,6 +384,7 @@
   function renderHome() {
     const ticker = ["Inglés", "Refuerzo escolar", "Técnicas de estudio", "Musibaby", "Escuela de verano"].map((item) => `<span>${item}</span>`).join("");
     return `
+      ${renderHomeSocialBar()}
       <section class="hero"><div class="container hero__grid hero__grid--single">
         <div class="hero__copy"><p class="eyebrow">Centro multidisciplinar de aprendizaje</p><h1>Aprender para <span class="word-accent">disfrutar</span></h1><p class="lead">Ayudamos a cada alumno a ganar confianza, conocer sus fortalezas y convertir el aprendizaje en una experiencia educativa, creativa y divertida.</p><div class="button-row"><a class="button button--aqua" href="/contacto">Cuéntanos qué necesitas ${icons.arrow}</a><a class="button button--outline" href="#programas">Ver programas</a></div><div class="hero__meta"><span>Calidad</span><span>Cercanía</span><span>Profesionalidad</span></div></div>
       </div></section>
@@ -662,3 +602,4 @@
   setupCookieBanner();
   setupReveals();
 })();
+
