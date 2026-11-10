@@ -800,6 +800,27 @@ h3 {
   object-fit: cover;
 }
 
+.england-summer-media {
+  background: var(--paper-deep);
+}
+
+.england-summer-video {
+  width: min(100%, 980px);
+  margin-inline: auto;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.england-summer-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-lg) - 10px);
+  background: var(--ink);
+}
+
 .check-list {
   display: grid;
   gap: 18px;

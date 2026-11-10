@@ -53,6 +53,7 @@
       children: [{ label: "Musibaby", href: "/musibaby", id: "musibaby" }]
     },
     { label: "Escuela de verano", href: "/escuela-verano", id: "escuela-verano" },
+    { label: "Verano en Inglaterra", href: "/verano-inglaterra", id: "verano-inglaterra" },
     { label: "Blog", href: "/blog", id: "blog" }
   ];
 
@@ -298,6 +299,20 @@
         { title: "Horario para facilitar la conciliación", text: "El horario amplio y flexible va de 7:45 a 16:00, con servicio de guardia y catering incluidos." },
         { title: "Modalidades de inscripción", text: "Las familias pueden elegir inscripción mensual, quincenal, semanal o por días sueltos, según sus necesidades." }
       ]
+    },
+    "verano-inglaterra": {
+      title: "Verano en Inglaterra",
+      eyebrow: "Campamento 2027",
+      lead: "Una experiencia de inmersión en inglés para vivir un verano diferente.",
+      tags: ["Inglaterra", "Inmersión en inglés", "Academia Britania", "2027"],
+      introTitle: "Una nueva aventura en Inglaterra",
+      intro: [
+        "Otro año más Educa10 colabora con la Academia Britania en su campamento en Inglaterra."
+      ],
+      highlights: ["Campamento en Inglaterra", "Colaboración con Academia Britania", "Verano 2027"],
+      sideTitle: "Solicita información",
+      sideText: "Contacta con Educa10 para conocer todos los detalles del campamento y resolver tus dudas.",
+      sections: []
     }
   };
 
@@ -437,8 +452,9 @@
     const related = page.related ? `<section class="section section--paper-deep"><div class="container"><div class="section-heading"><div><p class="eyebrow">Encuentra tu camino</p><h2>Elige el programa que encaja contigo</h2></div><p class="lead">Cada propuesta conserva la misma mirada cercana y adapta la forma de aprender a su etapa y objetivo.</p></div><div class="subpage-grid">${relatedCards(page.related)}</div></div></section>` : "";
     const cefrDiagram = pageId === "cambridge" ? `<section class="section section--compact cambridge-cefr-section"><div class="container"><figure class="cambridge-cefr reveal"><img src="assets/images/cambridge-cefr-qualifications.png" alt="Diagrama visual de las titulaciones Cambridge English y su equivalencia con los niveles del Marco Común Europeo" loading="lazy"><figcaption>Equivalencia visual de niveles y titulaciones Cambridge English</figcaption></figure></div></section>` : "";
     const glpShowcase = pageId === "ingles-ninos" ? `<section class="section glp-showcase" aria-labelledby="glp-showcase-title"><div class="container"><div class="glp-showcase__intro reveal"><img class="glp-showcase__logo" src="assets/images/glp-logotipo-principal.png" alt="Great Little People, English early learning"><div><p class="eyebrow">Inglés de 3 a 7 años</p><h2 id="glp-showcase-title">Aprender inglés jugando, explorando y creando</h2><p class="lead">Una metodología 360, íntegramente en inglés, que une aula, familia y materiales para convertir cada sesión en una experiencia activa y emocionante.</p></div></div><div class="glp-showcase__video-wrap reveal"><div class="glp-showcase__video-copy"><img src="assets/images/glp-isologo.png" alt="GLP" class="glp-showcase__isologo"><h3>Así vivimos Great Little People en Educa10</h3><p>Juego, movimiento, fonética, creatividad y materiales sensoriales adaptados a cada etapa.</p></div><video class="glp-showcase__video" controls playsinline preload="metadata" poster="assets/images/video-glp-portada.jpg"><source src="assets/videos/video-promocion-glp-educa10.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video></div><div class="glp-showcase__infographics" aria-label="Infografías de la metodología Great Little People"><figure class="reveal"><a href="assets/images/infografia-glp-metodologia-1.jpg" target="_blank" rel="noopener"><img src="assets/images/infografia-glp-metodologia-1.jpg" alt="Infografía sobre la metodología de inglés Great Little People para niños de 3 a 7 años" loading="lazy"></a><figcaption>Nuestra metodología de inglés de 3 a 7 años</figcaption></figure><figure class="reveal"><a href="assets/images/infografia-glp-metodologia-2.jpg" target="_blank" rel="noopener"><img src="assets/images/infografia-glp-metodologia-2.jpg" alt="Infografía sobre los rincones, materiales, certificados y evaluaciones de Great Little People" loading="lazy"></a><figcaption>Rincones, materiales y seguimiento del aprendizaje</figcaption></figure></div></div></section>` : "";
+    const englandSummerVideo = pageId === "verano-inglaterra" ? `<section class="section section--compact england-summer-media" aria-labelledby="england-video-title"><div class="container"><div class="section-heading"><div><p class="eyebrow">Descubre la experiencia</p><h2 id="england-video-title">Verano en Inglaterra 2027</h2></div><p class="lead">Conoce en este vídeo la propuesta del campamento.</p></div><div class="england-summer-video reveal"><video controls playsinline preload="metadata" poster="assets/images/verano-inglaterra-2027-portada.jpg"><source src="assets/videos/verano-inglaterra-2027.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video></div></div></section>` : "";
 
-    return `${pageHero(page)}${schedulesBlock}${cefrDiagram}${glpShowcase}
+    return `${pageHero(page)}${schedulesBlock}${cefrDiagram}${glpShowcase}${englandSummerVideo}
       <section class="section"><div class="container content-grid">
         <article class="prose reveal"><h2>${page.introTitle}</h2>${paragraphs}${mediaBlock}<ul class="check-list">${highlights}</ul>${sections}</article>
         <aside class="page-sidebar reveal"><div class="info-card"><span class="info-card__label">Te orientamos</span><h3>${page.sideTitle}</h3><p>${page.sideText}</p><a class="button button--aqua" href="/contacto?interes=${encodeURIComponent(page.title)}">Pedir información ${icons.arrow}</a></div></aside>
