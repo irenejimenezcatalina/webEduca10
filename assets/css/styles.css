@@ -821,6 +821,47 @@ h3 {
   background: var(--ink);
 }
 
+.upcoming-workshops {
+  background: var(--paper-deep);
+}
+
+.upcoming-workshops__heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.upcoming-workshops__heading h2 {
+  margin-top: 9px;
+}
+
+.upcoming-workshops__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 390px));
+  justify-content: center;
+  gap: clamp(18px, 3vw, 30px);
+}
+
+.upcoming-workshops__grid figure {
+  margin: 0;
+  padding: 9px;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.upcoming-workshops__grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-md) - 7px);
+}
+
+.upcoming-workshops__action {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .check-list {
   display: grid;
   gap: 18px;
@@ -2288,6 +2329,10 @@ h3 {
 
   .brand__logo {
     height: 40px;
+  }
+
+  .upcoming-workshops__grid {
+    grid-template-columns: minmax(0, 390px);
   }
 
   .home-social-bar__link {
